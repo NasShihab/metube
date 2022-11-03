@@ -13,6 +13,11 @@ sign_up
 fill_profile
 <img src="https://drive.google.com/uc?export=view&id=1FEYPr8gv6rfl2ZLLMVSZFnUd4ilys-iN" width="200" height="450">
 
+create_pin
+<img src="https://drive.google.com/uc?export=view&id=14eiuCngGhf7vehBysNPKeukI9mbcJ0hE" width="200" height="450">
+fingerprint
+<img src="https://drive.google.com/uc?export=view&id=1Gb5pBFHBZXdZSsefGARZgD9EJ196kC9u" width="200" height="450">
+
 fingerprint_confirmation
 <img src="https://drive.google.com/uc?export=view&id=1wOXHqP7EseCIn2HZGfaoj_ZOwLyC5NyU" width="200" height="450">
 homepage
