@@ -65,25 +65,71 @@ class HomePage extends StatelessWidget {
                   ],
                 ),
               ),
-              height25(),
-              Stack(
-                alignment: Alignment(.95.w, .95.h),
-                children: [
-                  ClipRRect(
-                    borderRadius: BorderRadius.circular(40.r),
-                    child: const Image(
-                      image: AssetImage('assets/images/image1.jpg'),
-                    ),
-                  ),
-                  customBorderText(
-                      backGroundColor: Colors.black,
-                      textColor: Colors.white,
-                      myText: '18 : 27',
-                      fontSize: 10,
-                      borderColor: Colors.transparent,
-                      borderRadius: 10.r)
-                ],
-              )
+              height10(),
+              Expanded(
+                child: ListView.builder(
+                    shrinkWrap: true,
+                    itemCount: 100,
+                    itemBuilder: (context, index) => Column(
+                          children: [
+                            height25(),
+                            Stack(
+                              alignment: Alignment(.95.w, .95.h),
+                              children: [
+                                ClipRRect(
+                                  borderRadius: BorderRadius.circular(40.r),
+                                  child: const Image(
+                                    image: AssetImage('assets/images/image1.jpg'),
+                                  ),
+                                ),
+                                customBorderText(
+                                    backGroundColor: Colors.black,
+                                    textColor: Colors.white,
+                                    myText: '18 : 27',
+                                    fontSize: 10,
+                                    borderColor: Colors.transparent,
+                                    borderRadius: 10.r)
+                              ],
+                            ),
+                            height10(),
+                            Row(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                CircleAvatar(
+                                  radius: 25.r,
+                                  backgroundColor: Colors.transparent,
+                                  backgroundImage: const AssetImage('assets/images/facebook.png'),
+                                ),
+                                width5(),
+                                Expanded(
+                                  child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        'Photography | Photography Tips | How to become a photographer | Quick Guid',
+                                        maxLines: 2,
+                                        overflow: TextOverflow.ellipsis,
+                                        style: TextStyle(
+                                          fontSize: 18.sp,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                      height5(),
+                                      Text(
+                                        'Talent Hunt  •  9.5M Views  •  8 months ago',
+                                        style: TextStyle(fontSize: 12.sp),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                width5(),
+                                Icon(Icons.more_vert, color: myBlack),
+                              ],
+                            ),
+                          ],
+                        )),
+              ),
             ],
           ),
         ),
@@ -91,3 +137,76 @@ class HomePage extends StatelessWidget {
     );
   }
 }
+
+Column a() => Column(
+      children: [
+        height25(),
+        Stack(
+          alignment: Alignment(.95.w, .95.h),
+          children: [
+            ClipRRect(
+              borderRadius: BorderRadius.circular(40.r),
+              child: const Image(
+                image: AssetImage('assets/images/image1.jpg'),
+              ),
+            ),
+            customBorderText(
+                backGroundColor: Colors.black,
+                textColor: Colors.white,
+                myText: '18 : 27',
+                fontSize: 10,
+                borderColor: Colors.transparent,
+                borderRadius: 10.r)
+          ],
+        ),
+        height10(),
+        Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            CircleAvatar(
+              radius: 25.r,
+              backgroundColor: Colors.transparent,
+              backgroundImage: const AssetImage('assets/images/facebook.png'),
+            ),
+            width5(),
+            Expanded(
+              child: Text(
+                'Photography | Photography Tips | How to become a photographer | Quick Guid',
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
+                style: TextStyle(
+                  fontSize: 18.sp,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+            width5(),
+            Icon(Icons.more_vert, color: myBlack),
+          ],
+        )
+      ],
+    );
+
+SingleChildScrollView s() => SingleChildScrollView(
+      scrollDirection: Axis.horizontal,
+      child: Wrap(
+        spacing: 10,
+        children: [
+          customBorderTextIcon(
+            myText: 'Trending',
+            icons: Padding(
+              padding: EdgeInsets.only(right: 5.w),
+              child: const Icon(
+                Icons.lightbulb_circle,
+                size: 18,
+              ),
+            ),
+          ),
+          customBorderTextIcon(myText: 'All'),
+          customBorderTextIcon(myText: 'For You'),
+          customBorderTextIcon(myText: 'Live'),
+          customBorderTextIcon(myText: 'Movies'),
+        ],
+      ),
+    );
