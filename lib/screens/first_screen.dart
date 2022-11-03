@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../z_reusable_widget/custom_height_weight.dart';
+import '../z_reusable_widget/height_weight.dart';
 import '../z_reusable_widget/text_custom.dart';
 
 class FirstScreen extends StatelessWidget {

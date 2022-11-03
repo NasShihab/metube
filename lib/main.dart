@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:metube/z_reusable_widget/my_theme_data.dart';
+import 'package:metube/z_reusable_widget/theme_data_custom.dart';
 import 'package:metube/z_reusable_widget/routes.dart';
 
 void main() {

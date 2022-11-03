@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:metube/z_reusable_widget/custom_buttons.dart';
-import 'package:metube/z_reusable_widget/custom_height_weight.dart';
+import 'package:metube/z_reusable_widget/buttons_custom.dart';
+import 'package:metube/z_reusable_widget/height_weight.dart';
 import 'package:metube/z_reusable_widget/text_custom.dart';
 
 class Login extends StatelessWidget {

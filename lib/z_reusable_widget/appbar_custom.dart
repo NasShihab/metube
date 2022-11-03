@@ -6,10 +6,13 @@ AppBar customAppBar(
       required String appBarTitle,
       Widget actionBarIcons = const SizedBox.shrink(),
       dynamic leadIcon = Icons.arrow_back,
+      double iconSize = 30,
+      dynamic iconColor = Colors.black,
+      double titleSize = 20,
     }) =>
     AppBar(
       title: Text(
-        appBarTitle,
+        appBarTitle, style: TextStyle(fontSize: titleSize.sp,),
       ),
       actions: [actionBarIcons],
       leading: IconButton(
@@ -18,7 +21,7 @@ AppBar customAppBar(
           },
           icon: Icon(
             leadIcon,
-            size: 30.sp,
-            color: Colors.black,
+            size: iconSize.sp,
+            color: iconColor,
           )),
     );

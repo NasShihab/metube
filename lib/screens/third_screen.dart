@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:metube/z_reusable_widget/custom_buttons.dart';
+import 'package:metube/z_reusable_widget/buttons_custom.dart';
 
 class ThirdScreen extends StatelessWidget {
   const ThirdScreen({Key? key}) : super(key: key);

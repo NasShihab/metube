@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:metube/z_reusable_widget/custom_colors.dart';
-import 'package:metube/z_reusable_widget/custom_height_weight.dart';
+import 'package:metube/z_reusable_widget/colors_custom.dart';
+import 'package:metube/z_reusable_widget/height_weight.dart';
 import '../z_reusable_widget/appbar_custom.dart';
-import '../z_reusable_widget/custom_buttons.dart';
+import '../z_reusable_widget/buttons_custom.dart';
 
 class FillProfile extends StatelessWidget {
   const FillProfile({Key? key}) : super(key: key);

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:metube/z_reusable_widget/custom_buttons.dart';
+import 'package:metube/z_reusable_widget/buttons_custom.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 import '../z_reusable_widget/appbar_custom.dart';
 

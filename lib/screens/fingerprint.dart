@@ -3,8 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:metube/z_reusable_widget/text_custom.dart';
 
 import '../z_reusable_widget/appbar_custom.dart';
-import '../z_reusable_widget/custom_buttons.dart';
-import '../z_reusable_widget/custom_colors.dart';
+import '../z_reusable_widget/buttons_custom.dart';
+import '../z_reusable_widget/colors_custom.dart';
 
 class Fingerprint extends StatelessWidget {
   const Fingerprint({Key? key}) : super(key: key);
