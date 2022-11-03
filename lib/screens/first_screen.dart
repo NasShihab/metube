@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../z_reusable_widget/custom_height_weight.dart';
-import '../z_reusable_widget/custom_text.dart';
+import '../z_reusable_widget/text_custom.dart';
 
 class FirstScreen extends StatelessWidget {
   const FirstScreen({Key? key}) : super(key: key);
@@ -23,7 +23,7 @@ class FirstScreen extends StatelessWidget {
                     size: 40.sp,
                   )),
               width20(),
-              myBoldText(text: 'MeTube', fontSize: 50.sp),
+              myTextBold(text: 'MeTube', fontSize: 50.sp),
             ],
           ),
         ),

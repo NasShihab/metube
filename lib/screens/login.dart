@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:metube/z_reusable_widget/custom_buttons.dart';
 import 'package:metube/z_reusable_widget/custom_height_weight.dart';
-import 'package:metube/z_reusable_widget/custom_text.dart';
+import 'package:metube/z_reusable_widget/text_custom.dart';
 
 class Login extends StatelessWidget {
   const Login({Key? key}) : super(key: key);
@@ -40,7 +40,7 @@ class Login extends StatelessWidget {
             ),
             // Let's You In
             height10(),
-            myBoldText(text: 'Login to your account', fontSize: 30.sp),
+            myTextBold(text: 'Login to your account', fontSize: 30.sp),
             SizedBox(height: 30.h),
             myTextField(
               icon: const Icon(Icons.email),

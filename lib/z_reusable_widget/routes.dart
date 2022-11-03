@@ -5,11 +5,12 @@ import 'package:metube/screens/login.dart';
 import 'package:metube/screens/sign_up.dart';
 import 'package:metube/screens/third_screen.dart';
 import 'package:metube/screens/welcome.dart';
-import '../screens/first_screen.dart';
+import '../screens/create_pin.dart';
+import '../screens/fingerprint.dart';
 import '../screens/second_screen.dart';
 
 var myRoutes = <String, WidgetBuilder>{
-  '/': (context) => const Welcome(),
+  '/': (context) => const Fingerprint(),
   '/second_screen': (context) => const SecondScreen(),
   '/third_screen': (context) => const ThirdScreen(),
   '/fourth_screen': (context) => const FourthScreen(),
@@ -17,4 +18,6 @@ var myRoutes = <String, WidgetBuilder>{
   '/login': (context) => const Login(),
   '/sign_up': (context) => const SignUp(),
   '/fill_profile': (context) => const FillProfile(),
+  '/create_pin': (context) => const CreatePin(),
+  '/fingerprint': (context) => const Fingerprint(),
 };

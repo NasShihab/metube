@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:metube/z_reusable_widget/custom_colors.dart';
 import 'package:metube/z_reusable_widget/custom_height_weight.dart';
-import '../z_reusable_widget/appbar.dart';
+import '../z_reusable_widget/appbar_custom.dart';
 import '../z_reusable_widget/custom_buttons.dart';
 
 class FillProfile extends StatelessWidget {
@@ -13,7 +13,10 @@ class FillProfile extends StatelessWidget {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       extendBodyBehindAppBar: true,
-      appBar: customAppBar(context, appBarTitle: 'Fill Your Profile'),
+      appBar: customAppBar(
+        context,
+        appBarTitle: 'Fill Your Profile',
+      ),
       body: SafeArea(
           child: Padding(
         padding: EdgeInsets.symmetric(horizontal: 24.w),
@@ -30,9 +33,9 @@ class FillProfile extends StatelessWidget {
                   Stack(
                     children: [
                       CircleAvatar(
-                        backgroundColor: Colors.grey,
+                        backgroundColor: Colors.transparent,
                         radius: 100.r,
-                        backgroundImage: const AssetImage('assets/images/profile.png'),
+                        backgroundImage: const AssetImage('assets/images/google.png'),
                       ),
                       Positioned(
                           bottom: 5.h,
@@ -72,17 +75,13 @@ class FillProfile extends StatelessWidget {
       )),
       floatingActionButton: Row(
         children: [
-          Expanded(child: customButton(
-              backgroundColor: myGrey,
-              foregroundColor: myPinkAccent,
-              borderColor: myGrey,
-              title: 'Skip',
-              onPressed: () {})),
-
-
-          Expanded(child: customButton(
-              title: 'Continue',
-              onPressed: () {})),
+          Expanded(child: customButton(backgroundColor: myGrey, foregroundColor: myPinkAccent, borderColor: myGrey, title: 'Skip', onPressed: () {})),
+          Expanded(
+              child: customButton(
+                  title: 'Continue',
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/create_pin');
+                  })),
         ],
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
