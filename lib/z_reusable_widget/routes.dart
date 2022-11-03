@@ -11,7 +11,7 @@ import '../screens/home_page.dart';
 import '../screens/second_screen.dart';
 
 var myRoutes = <String, WidgetBuilder>{
-  '/': (context) => const HomePage(),
+  '/': (context) => const Welcome(),
   '/second_screen': (context) => const SecondScreen(),
   '/third_screen': (context) => const ThirdScreen(),
   '/fourth_screen': (context) => const FourthScreen(),
