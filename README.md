@@ -31,4 +31,4 @@ homepage
 create_new_password
 <img src="https://drive.google.com/uc?export=view&id=1EZNMWH2h9uLB0VvzoD-xpuEhZAqmZ19Q" width="200" height="450">
 NAS
-<img src="https://ibb.co/W3y5Mxz" width="200" height="450">
+<img src="https://i.ibb.co/GJ2p8xM/flill-profile.png" width="200" height="450">
