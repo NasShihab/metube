@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:metube/screen_widget/bottom_navigation_bar_page.dart';
 import 'package:metube/z_reusable_widget/appbar_custom.dart';
 import 'package:metube/z_reusable_widget/colors_custom.dart';
 import 'package:metube/z_reusable_widget/height_weight.dart';
@@ -134,6 +135,7 @@ class HomePage extends StatelessWidget {
           ),
         ),
       ),
+      bottomNavigationBar: const BottomNavigationBarPage(),
     );
   }
 }
