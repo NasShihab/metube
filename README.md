@@ -4,7 +4,7 @@
 [comment]: <> (welcome)
 
 welcome
-<img src="https://drive.google.com/uc?export=view&id=1D7h2ynRa33krbdVBfdXwReiWi-dNdXEO" width="200" height="450">
+<img src="https://www.dropbox.com/s/vidiec3n9sxvk9n/create_new_password.png?raw=1" width="200" height="450">
 login
 <img src="https://drive.google.com/uc?export=view&id=1-Bzv35qCCFSlVYf3ejY_6DythbA3iEme" width="200" height="450">
 
