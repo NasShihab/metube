@@ -3,9 +3,6 @@
 #Some ScreenShot (progress)
 [comment]: <> (welcome)
 
-welcome
-<img src="https://drive.google.com/uc?export=view&id=1D7h2ynRa33krbdVBfdXwReiWi-dNdXEO" width="200" height="450">
-
 imgg
 <img src="https://i.ibb.co/dg3x8bW/forget-password.png" alt="forget-password" border="0" width="200" height="450">
 <img src="https://i.ibb.co/17zNCq8/home-page.png" alt="home-page" border="0" width="200" height="450">
