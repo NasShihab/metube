@@ -44,3 +44,6 @@ create_new_password_confirmation
 <img src="https://www.dropbox.com/s/fksml72oowjvf0u/create_new_password_confirmation.png?raw=1" width="200" height="450">
 home_page
 <img src="https://www.dropbox.com/s/8ma2139iry0o7n2/home_page.png?raw=1" width="200" height="450">
+
+home_page2
+<img src="https://www.dropbox.com/s/vtbvy4qwskrbqcf/home_page_2.png?raw=1" width="200" height="450">

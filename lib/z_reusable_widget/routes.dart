@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:metube/screens/fill_profile.dart';
-import 'package:metube/screens/first_screen.dart';
 import 'package:metube/screens/forget_password.dart';
 import 'package:metube/screens/fourth_screen.dart';
 import 'package:metube/screens/login.dart';
@@ -16,7 +15,7 @@ import '../screens/second_screen.dart';
 
 var myRoutes = <String, WidgetBuilder>{
 
-  '/': (context) => const FirstScreen(),
+  '/': (context) => const HomePage(),
   '/second_screen': (context) => const SecondScreen(),
   '/third_screen': (context) => const ThirdScreen(),
   '/fourth_screen': (context) => const FourthScreen(),
