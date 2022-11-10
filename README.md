@@ -22,16 +22,16 @@ sign_up
 fill_profile
 <img src="https://www.dropbox.com/s/5qrfn9aze7odkp6/flill_profile.png?raw=1" width="200" height="450">
 create_pin
-<img src="https://www.dropbox.com/s/kstvq508ahz8337/first_screen.png?raw=1" width="200" height="450">
+<img src="https://www.dropbox.com/s/d7r2b1e6rveqlu4/create_pin.png?raw=1" width="200" height="450">
 fingerprint
-<img src="https://www.dropbox.com/s/kstvq508ahz8337/first_screen.png?raw=1" width="200" height="450">
+<img src="https://www.dropbox.com/s/zwokh0wlzsgbri4/fingerprint.png?raw=1" width="200" height="450">
 forget_password
-<img src="https://www.dropbox.com/s/kstvq508ahz8337/first_screen.png?raw=1" width="200" height="450">
+<img src="https://www.dropbox.com/s/mhg2wcxx4v2kdxu/forget_password.png?raw=1" width="200" height="450">
 forget_password_confirmation
-<img src="https://www.dropbox.com/s/kstvq508ahz8337/first_screen.png?raw=1" width="200" height="450">
+<img src="https://www.dropbox.com/s/ydryahasg5kdbpq/fingerprint_confirmation.png?raw=1" width="200" height="450">
 create_pin
-<img src="https://www.dropbox.com/s/kstvq508ahz8337/first_screen.png?raw=1" width="200" height="450">
+<img src="https://www.dropbox.com/s/d7r2b1e6rveqlu4/create_pin.png?raw=1" width="200" height="450">
 enter_otp_code
-<img src="https://www.dropbox.com/s/kstvq508ahz8337/first_screen.png?raw=1" width="200" height="450">
+<img src="https://www.dropbox.com/s/yhv3unqpwzh0w3w/enter_otp_code.png?raw=1" width="200" height="450">
 home_page
-<img src="https://www.dropbox.com/s/kstvq508ahz8337/first_screen.png?raw=1" width="200" height="450">
+<img src="https://www.dropbox.com/s/8ma2139iry0o7n2/home_page.png?raw=1" width="200" height="450">
