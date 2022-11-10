@@ -51,7 +51,9 @@ class EnterOtpCode extends StatelessWidget {
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: customButton(
         title: 'Verify',
-        onPressed: () {},
+        onPressed: () {
+          Navigator.pushNamed(context, '/create_new_password');
+        },
       ),
     );
   }
