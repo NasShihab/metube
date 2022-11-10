@@ -35,10 +35,7 @@ forget_password
 forget_password_confirmation
 <img src="https://www.dropbox.com/s/ydryahasg5kdbpq/fingerprint_confirmation.png?raw=1" width="200" height="450">
 
-create_pin
-<img src="https://www.dropbox.com/s/d7r2b1e6rveqlu4/create_pin.png?raw=1" width="200" height="450">
 enter_otp_code
 <img src="https://www.dropbox.com/s/yhv3unqpwzh0w3w/enter_otp_code.png?raw=1" width="200" height="450">
-
 home_page
 <img src="https://www.dropbox.com/s/8ma2139iry0o7n2/home_page.png?raw=1" width="200" height="450">
