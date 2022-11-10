@@ -30,12 +30,17 @@ create_pin
 fingerprint
 <img src="https://www.dropbox.com/s/zwokh0wlzsgbri4/fingerprint.png?raw=1" width="200" height="450">
 
+fingerprint_confirmation
+<img src="https://www.dropbox.com/s/ydryahasg5kdbpq/fingerprint_confirmation.png?raw=1" width="200" height="450">
 forget_password
 <img src="https://www.dropbox.com/s/mhg2wcxx4v2kdxu/forget_password.png?raw=1" width="200" height="450">
-forget_password_confirmation
-<img src="https://www.dropbox.com/s/ydryahasg5kdbpq/fingerprint_confirmation.png?raw=1" width="200" height="450">
 
 enter_otp_code
 <img src="https://www.dropbox.com/s/yhv3unqpwzh0w3w/enter_otp_code.png?raw=1" width="200" height="450">
+create_new_password
+<img src="https://www.dropbox.com/s/dtfnd3zqogx5ej6/create_new_password.png?raw=1" width="200" height="450">
+
+create_new_password_confirmation
+<img src="https://www.dropbox.com/s/fksml72oowjvf0u/create_new_password_confirmation.png?raw=1" width="200" height="450">
 home_page
 <img src="https://www.dropbox.com/s/8ma2139iry0o7n2/home_page.png?raw=1" width="200" height="450">
