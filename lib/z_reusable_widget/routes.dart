@@ -14,6 +14,7 @@ import '../screens/home_page.dart';
 import '../screens/second_screen.dart';
 
 var myRoutes = <String, WidgetBuilder>{
+
   '/': (context) => const CreateNewPassword(),
   '/second_screen': (context) => const SecondScreen(),
   '/third_screen': (context) => const ThirdScreen(),
