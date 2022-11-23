@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:metube/dashboard/more_option_widget.dart';
 
-import '../z_reusable_widget/appbar_custom.dart';
-import '../z_reusable_widget/colors_custom.dart';
-import '../z_reusable_widget/height_weight.dart';
-import '../z_reusable_widget/text_custom.dart';
+import '../../z_reusable_widget/appbar_custom.dart';
+import '../../z_reusable_widget/colors_custom.dart';
+import '../../z_reusable_widget/height_weight.dart';
+import '../../z_reusable_widget/text_custom.dart';
 
 AppBar homePage(BuildContext context) => customAppBar(
       context,
@@ -174,7 +175,24 @@ Column customFeedShorts(BuildContext context) => Column(
               ),
             ),
             width5(),
-            Icon(Icons.more_vert, color: myBlack),
+            GestureDetector(
+              child: Icon(
+                Icons.more_vert,
+                color: myBlack,
+              ),
+              onTap: () {
+                showModalBottomSheet(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.vertical(
+                        top: Radius.circular(30.r),
+                      ),
+                    ),
+                    context: context,
+                    builder: (context) {
+                      return moreOption(context);
+                    });
+              },
+            ),
           ],
         ),
         height10(),
@@ -197,7 +215,7 @@ Column customFeedShorts(BuildContext context) => Column(
             itemCount: 4,
             itemBuilder: (context, index) => Padding(
               padding: EdgeInsets.only(right: 10.w),
-              child: shorts(),
+              child: shorts(context),
             ),
           ),
         ),
@@ -205,7 +223,7 @@ Column customFeedShorts(BuildContext context) => Column(
       ],
     );
 
-Widget shorts() => Stack(
+Widget shorts(BuildContext context) => Stack(
       children: [
         ClipRRect(
           borderRadius: BorderRadius.circular(25.r),
@@ -219,10 +237,24 @@ Widget shorts() => Stack(
         Positioned(
           right: 10.w,
           top: 10.h,
-          child: Icon(
-            Icons.more_vert,
-            color: Colors.white,
-            size: 25.sp,
+          child: GestureDetector(
+            onTap: (){
+              showModalBottomSheet(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.vertical(
+                      top: Radius.circular(30.r),
+                    ),
+                  ),
+                  context: context,
+                  builder: (context) {
+                    return moreOption(context);
+                  });
+            },
+            child: Icon(
+              Icons.more_vert,
+              color: Colors.white,
+              size: 25.sp,
+            ),
           ),
         ),
         Positioned(
