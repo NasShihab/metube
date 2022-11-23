@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:metube/screens/fill_profile.dart';
-import 'package:metube/screens/forget_password.dart';
+import 'package:metube/auth/fill_profile.dart';
+import 'package:metube/auth/forget_password.dart';
 import 'package:metube/screens/fourth_screen.dart';
-import 'package:metube/screens/login.dart';
-import 'package:metube/screens/sign_up.dart';
+import 'package:metube/auth/login.dart';
+import 'package:metube/auth/sign_up.dart';
 import 'package:metube/screens/third_screen.dart';
 import 'package:metube/screens/welcome.dart';
-import '../screens/create_new_password.dart';
-import '../screens/enter_otp_code.dart';
-import '../screens/create_pin.dart';
-import '../screens/fingerprint.dart';
-import '../screens/home_page.dart';
+import '../auth/create_new_password.dart';
+import '../auth/enter_otp_code.dart';
+import '../auth/create_pin.dart';
+import '../auth/fingerprint.dart';
+import '../dashboard/home_page.dart';
 import '../screens/second_screen.dart';
 
 var myRoutes = <String, WidgetBuilder>{
