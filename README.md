@@ -47,3 +47,8 @@ home_page
 
 home_page2
 <img src="https://www.dropbox.com/s/vtbvy4qwskrbqcf/home_page_2.png?raw=1" width="200" height="450">
+more_option
+<img src="https://www.dropbox.com/s/vw5tfepl2a4xoag/more_option.png?raw=1" width="200" height="450">
+
+report
+<img src="https://www.dropbox.com/s/lqo0drinq2f17qj/report.png?raw=1" width="200" height="450">
