@@ -52,3 +52,5 @@ more_option
 
 report
 <img src="https://www.dropbox.com/s/lqo0drinq2f17qj/report.png?raw=1" width="200" height="450">
+notification_page
+<img src="https://www.dropbox.com/s/htgttpb6txdelmz/notification.png?raw=1" width="200" height="450">
