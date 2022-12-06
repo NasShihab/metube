@@ -4,6 +4,7 @@ import 'package:metube/auth/forget_password.dart';
 import 'package:metube/dashboard/dashboard.dart';
 import 'package:metube/auth/login.dart';
 import 'package:metube/auth/sign_up.dart';
+import 'package:metube/dashboard/notification/notification_page.dart';
 import '../auth/create_new_password.dart';
 import '../auth/enter_otp_code.dart';
 import '../auth/create_pin.dart';
@@ -17,7 +18,7 @@ import '../start_screen/welcome.dart';
 var myRoutes = <String, WidgetBuilder>{
 
 
-  '/': (context) => const Dashboard(),
+  '/': (context) => const NotificationPage(),
   '/dashboard': (context) => const Dashboard(),
   '/second_screen': (context) => const SecondScreen(),
   '/third_screen': (context) => const ThirdScreen(),
@@ -32,4 +33,5 @@ var myRoutes = <String, WidgetBuilder>{
   '/forget_password': (context) => const ForgetPassword(),
   '/enter_otp_code': (context) => const EnterOtpCode(),
   '/create_new_password': (context) => const CreateNewPassword(),
+  '/notification_page': (context) => const NotificationPage(),
 };
