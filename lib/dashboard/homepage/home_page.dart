@@ -16,7 +16,7 @@ class HomePage extends StatelessWidget {
             children: [
               Padding(
                 padding: EdgeInsets.symmetric(vertical: 10.h),
-                child: homeCategory(),
+                child: homeCategory(context),
               ),
               Expanded(
                 child: ListView.builder(

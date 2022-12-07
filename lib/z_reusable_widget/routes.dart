@@ -10,6 +10,7 @@ import '../auth/enter_otp_code.dart';
 import '../auth/create_pin.dart';
 import '../auth/fingerprint.dart';
 import '../dashboard/homepage/home_page.dart';
+import '../dashboard/trending/trending.dart';
 import '../start_screen/fourth_screen.dart';
 import '../start_screen/second_screen.dart';
 import '../start_screen/third_screen.dart';
@@ -18,7 +19,7 @@ import '../start_screen/welcome.dart';
 var myRoutes = <String, WidgetBuilder>{
 
 
-  '/': (context) => const NotificationPage(),
+  '/': (context) => const Dashboard(),
   '/dashboard': (context) => const Dashboard(),
   '/second_screen': (context) => const SecondScreen(),
   '/third_screen': (context) => const ThirdScreen(),
@@ -34,4 +35,5 @@ var myRoutes = <String, WidgetBuilder>{
   '/enter_otp_code': (context) => const EnterOtpCode(),
   '/create_new_password': (context) => const CreateNewPassword(),
   '/notification_page': (context) => const NotificationPage(),
+  '/trending': (context) => const Trending(),
 };

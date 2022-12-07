@@ -78,46 +78,6 @@ class _DashboardState extends State<Dashboard> {
           ],
         ),
       ),
-      // bottomNavigationBar: BottomNavigationBar(
-      //   onTap: (int index) {
-      //     setState(() {
-      //       currentIndex = index;
-      //     });
-      //   },
-      //   selectedLabelStyle: TextStyle(
-      //     fontSize: 14.sp,
-      //     fontWeight: FontWeight.bold,
-      //     color: Colors.red,
-      //   ),
-      //   items: [
-      //     BottomNavigationBarItem(
-      //       label: 'Home',
-      //       icon: Icon(Icons.home_outlined, color: myPinkAccent, size: 30.sp),
-      //     ),
-      //     BottomNavigationBarItem(
-      //       label: 'Shorts',
-      //       icon: Icon(Icons.calendar_month_outlined,
-      //           color: myPinkAccent, size: 30.sp),
-      //     ),
-      //     BottomNavigationBarItem(
-      //       label: 'Post',
-      //       icon: Icon(Icons.add_circle, color: myPinkAccent, size: 30.sp),
-      //     ),
-      //     BottomNavigationBarItem(
-      //       label: 'Subscription',
-      //       icon: Icon(Icons.subscriptions_outlined,
-      //           color: myPinkAccent, size: 30.sp),
-      //     ),
-      //     BottomNavigationBarItem(
-      //       label: 'History',
-      //       icon: Icon(
-      //         Icons.history_edu,
-      //         color: myPinkAccent,
-      //         size: 30.sp,
-      //       ),
-      //     ),
-      //   ],
-      // ),
       body: screens[index],
     );
   }

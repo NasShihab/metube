@@ -21,9 +21,14 @@ AppBar homePage(BuildContext context) => customAppBar(
             size: 28.sp,
           ),
           width10(),
-          Icon(
-            Icons.notifications_active,
-            size: 28.sp,
+          GestureDetector(
+            onTap: () {
+              Navigator.pushNamed(context, '/notification_page');
+            },
+            child: Icon(
+              Icons.notifications_active,
+              size: 28.sp,
+            ),
           ),
           width10(),
           CircleAvatar(
@@ -36,18 +41,24 @@ AppBar homePage(BuildContext context) => customAppBar(
       ),
     );
 
-SingleChildScrollView homeCategory() => SingleChildScrollView(
+Widget homeCategory(BuildContext context) =>
+    SingleChildScrollView(
       scrollDirection: Axis.horizontal,
       child: Wrap(
         spacing: 10,
         children: [
-          customBorderTextIcon(
-            myText: 'Trending',
-            icons: Padding(
-              padding: EdgeInsets.only(right: 5.w),
-              child: const Icon(
-                Icons.lightbulb_circle,
-                size: 18,
+          GestureDetector(
+            onTap: () {
+              Navigator.pushNamed(context, '/trending');
+            },
+            child: customBorderTextIcon(
+              myText: 'Trending',
+              icons: Padding(
+                padding: EdgeInsets.only(right: 5.w),
+                child: const Icon(
+                  Icons.lightbulb_circle,
+                  size: 18,
+                ),
               ),
             ),
           ),
@@ -238,7 +249,7 @@ Widget shorts(BuildContext context) => Stack(
           right: 10.w,
           top: 10.h,
           child: GestureDetector(
-            onTap: (){
+            onTap: () {
               showModalBottomSheet(
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.vertical(
