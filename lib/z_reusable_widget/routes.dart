@@ -35,5 +35,5 @@ var myRoutes = <String, WidgetBuilder>{
   '/enter_otp_code': (context) => const EnterOtpCode(),
   '/create_new_password': (context) => const CreateNewPassword(),
   '/notification_page': (context) => const NotificationPage(),
-  '/trending': (context) => const Trending(),
+  '/trending': (context) => Trending(),
 };
