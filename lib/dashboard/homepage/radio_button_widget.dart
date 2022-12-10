@@ -1,20 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:metube/dashboard/homepage/radio_button_widget_provider.dart';
 import 'package:metube/z_reusable_widget/buttons_custom.dart';
 import 'package:metube/z_reusable_widget/colors_custom.dart';
 import 'package:metube/z_reusable_widget/height_weight.dart';
 
-class RadioButton extends StatefulWidget {
+final radioItemProvider = StateNotifierProvider<RadioButtonProvider, int>(
+  (ref) => RadioButtonProvider(),
+);
+
+class RadioButton extends ConsumerWidget {
   const RadioButton({Key? key}) : super(key: key);
 
-  @override
-  State<RadioButton> createState() => _RadioButtonState();
-}
 
-class _RadioButtonState extends State<RadioButton> {
-  int _value = 1;
+
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final selectedIndex = ref.watch(radioItemProvider);
+
     return Container(
       height: MediaQuery.of(context).size.height * .50,
       padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 20.h),
@@ -35,11 +39,12 @@ class _RadioButtonState extends State<RadioButton> {
                 children: [
                   Radio(
                     value: index,
-                    groupValue: _value,
+                    groupValue: selectedIndex,
                     onChanged: (value) {
-                      setState(() {
-                        _value = value as int;
-                      });
+                      ref.read(radioItemProvider.notifier).selected(index);
+                      // setState(() {
+                      //   _value = value as int;
+                      // });
                     },
                   ),
                   Text(
