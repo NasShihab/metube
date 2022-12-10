@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:metube/auth/fill_profile.dart';
 import 'package:metube/auth/forget_password.dart';
-import 'package:metube/dashboard/dashboard.dart';
+import 'package:metube/dashboard/dashboard/dashboard.dart';
 import 'package:metube/auth/login.dart';
 import 'package:metube/auth/sign_up.dart';
 import 'package:metube/dashboard/notification/notification_page.dart';

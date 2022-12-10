@@ -1,27 +1,29 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:metube/z_reusable_widget/colors_custom.dart';
+import 'dashboard_provider.dart';
+import '../homepage/home_page.dart';
 
-import 'homepage/home_page.dart';
+final dashboardItemProvider = StateNotifierProvider<DashboardProvider, int>(
+  (ref) => DashboardProvider(),
+);
 
-class Dashboard extends StatefulWidget {
+class Dashboard extends ConsumerWidget {
   const Dashboard({Key? key}) : super(key: key);
 
   @override
-  State<Dashboard> createState() => _DashboardState();
-}
+  Widget build(BuildContext context, WidgetRef ref) {
+    final List<Widget> screens = [
+      const HomePage(),
+      const HomePage(),
+      const HomePage(),
+      const HomePage(),
+      const HomePage(),
+    ];
 
-class _DashboardState extends State<Dashboard> {
-  final List<Widget> screens = [
-    const HomePage(),
-    const HomePage(),
-    const HomePage(),
-    const HomePage(),
-    const HomePage(),
-  ];
-  int index = 0;
-  @override
-  Widget build(BuildContext context) {
+    final index = ref.watch(dashboardItemProvider);
+
     return Scaffold(
       bottomNavigationBar: NavigationBarTheme(
         data: NavigationBarThemeData(
@@ -33,7 +35,9 @@ class _DashboardState extends State<Dashboard> {
         child: NavigationBar(
           backgroundColor: myGrey,
           selectedIndex: index,
-          onDestinationSelected: (index) => setState(() => this.index = index),
+          onDestinationSelected: (index) {
+            ref.read(dashboardItemProvider.notifier).selected(index);
+          },
           destinations: [
             NavigationDestination(
               icon: const Icon(Icons.home_outlined),
