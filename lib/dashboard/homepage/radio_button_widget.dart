@@ -54,21 +54,16 @@ class _RadioButtonState extends State<RadioButton> {
             children: [
               Expanded(
                 child: customButton(
-                  title: 'Cancel',
-                  onPressed: () {},
-                  backgroundColor: myGrey,
-                  foregroundColor: myPinkAccent,
-                  borderColor: myGrey,
-                  height: 60.h
-                ),
+                    title: 'Cancel',
+                    onPressed: () {},
+                    backgroundColor: myGrey,
+                    foregroundColor: myPinkAccent,
+                    borderColor: myGrey,
+                    height: 60.h),
               ),
               Expanded(
                 child: customButton(
-                  title: 'Report',
-                  onPressed: () {},
-
-                    height: 60.h
-                ),
+                    title: 'Report', onPressed: () {}, height: 60.h),
               ),
             ],
           ),
