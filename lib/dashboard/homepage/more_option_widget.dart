@@ -3,7 +3,18 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../z_reusable_widget/height_weight.dart';
 import 'radio_button_widget.dart';
 
-Widget moreOption(BuildContext context) => SizedBox(
+Future moreOption(BuildContext context) => showModalBottomSheet(
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.vertical(
+        top: Radius.circular(30.r),
+      ),
+    ),
+    context: context,
+    builder: (context) {
+      return moreOptionItem(context);
+    });
+
+Widget moreOptionItem(BuildContext context) => SizedBox(
       height: MediaQuery.of(context).size.height * .50,
       child: Padding(
         padding: EdgeInsets.symmetric(vertical: 20.h, horizontal: 20.w),

@@ -7,7 +7,7 @@ import 'package:metube/z_reusable_widget/appbar_custom.dart';
 import 'package:metube/z_reusable_widget/height_weight.dart';
 import '../homepage/home_page_widget.dart';
 
-final trendingItemProvider = StateNotifierProvider<TrendingProvider, int>(
+final trendingItemProvider = StateNotifierProvider.autoDispose<TrendingProvider, int>(
   (ref) => TrendingProvider(),
 );
 
@@ -18,24 +18,49 @@ class Trending extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final selectedIndex = ref.watch(trendingItemProvider);
     return Scaffold(
-      appBar: customAppBar(context, appBarTitle: 'Trending'),
+      appBar: customAppBar(
+        context,
+        appBarTitle: 'Trending',
+        actionBarIcons: Row(
+          children: [
+            Icon(
+              Icons.location_searching,
+              size: 28.sp,
+            ),
+            width10(),
+            GestureDetector(
+              onTap: () {
+                Navigator.pushNamed(context, '/notification_page');
+              },
+              child: Icon(
+                Icons.more_vert_rounded,
+                size: 28.sp,
+              ),
+            ),
+            width10(),
+          ],
+        ),
+      ),
       body: SafeArea(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
-              child: Wrap(
-                // customBorderTextIcon(myText: 'Top'),
-                spacing: 10,
-                children: List.generate(
-                  5,
-                  (index) => InkWell(
-                    onTap: () {
-                      ref.read(trendingItemProvider.notifier).selected(index);
-                    },
-                    child: categoryItem(
-                        index: index, selectedIndex: selectedIndex),
+              child: Padding(
+                padding: EdgeInsets.only(left: 10.w),
+                child: Wrap(
+                  // customBorderTextIcon(myText: 'Top'),
+                  spacing: 10,
+                  children: List.generate(
+                    5,
+                    (index) => InkWell(
+                      onTap: () {
+                        ref.read(trendingItemProvider.notifier).selected(index);
+                      },
+                      child: categoryItem(
+                          index: index, selectedIndex: selectedIndex),
+                    ),
                   ),
                 ),
               ),
@@ -48,7 +73,7 @@ class Trending extends ConsumerWidget {
                 itemBuilder: (context, index) => Padding(
                   padding:
                       EdgeInsets.symmetric(horizontal: 25.w, vertical: 10.h),
-                  child: customFeed(),
+                  child: customFeed(context),
                 ),
               ),
             ),

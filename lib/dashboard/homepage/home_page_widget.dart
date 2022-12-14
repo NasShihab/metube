@@ -16,9 +16,14 @@ AppBar homePage(BuildContext context) => customAppBar(
       appBarTitle: 'MeTube',
       actionBarIcons: Row(
         children: [
-          Icon(
-            Icons.location_searching,
-            size: 28.sp,
+          GestureDetector(
+            onTap: (){
+              Navigator.pushNamed(context, '/search_page');
+            },
+            child: Icon(
+              Icons.search_outlined,
+              size: 28.sp,
+            ),
           ),
           width10(),
           GestureDetector(
@@ -41,8 +46,7 @@ AppBar homePage(BuildContext context) => customAppBar(
       ),
     );
 
-Widget homeCategory(BuildContext context) =>
-    SingleChildScrollView(
+Widget homeCategory(BuildContext context) => SingleChildScrollView(
       scrollDirection: Axis.horizontal,
       child: Wrap(
         spacing: 10,
@@ -70,7 +74,7 @@ Widget homeCategory(BuildContext context) =>
       ),
     );
 
-Column customFeed() => Column(
+Column customFeed(BuildContext context) => Column(
       children: [
         Stack(
           alignment: Alignment(.95.w, .95.h),
@@ -97,7 +101,7 @@ Column customFeed() => Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             CircleAvatar(
-              radius: 25.r,
+              radius: 20.r,
               backgroundColor: Colors.transparent,
               backgroundImage: const AssetImage('assets/images/facebook.png'),
             ),
@@ -124,7 +128,14 @@ Column customFeed() => Column(
               ),
             ),
             width5(),
-            Icon(Icons.more_vert, color: myBlack),
+            GestureDetector(
+              onTap: (){
+                moreOption(context);
+              },
+                child: Icon(
+              Icons.more_vert,
+              color: myBlack,
+            )),
           ],
         ),
         height10(),
@@ -159,7 +170,7 @@ Column customFeedShorts(BuildContext context) => Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             CircleAvatar(
-              radius: 25.r,
+              radius: 20.r,
               backgroundColor: Colors.transparent,
               backgroundImage: const AssetImage('assets/images/portrait.jpg'),
             ),
@@ -192,16 +203,7 @@ Column customFeedShorts(BuildContext context) => Column(
                 color: myBlack,
               ),
               onTap: () {
-                showModalBottomSheet(
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.vertical(
-                        top: Radius.circular(30.r),
-                      ),
-                    ),
-                    context: context,
-                    builder: (context) {
-                      return moreOption(context);
-                    });
+                moreOption(context);
               },
             ),
           ],
@@ -258,7 +260,7 @@ Widget shorts(BuildContext context) => Stack(
                   ),
                   context: context,
                   builder: (context) {
-                    return moreOption(context);
+                    return moreOptionItem(context);
                   });
             },
             child: Icon(
