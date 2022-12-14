@@ -54,3 +54,13 @@ report
 <img src="https://www.dropbox.com/s/lqo0drinq2f17qj/report.png?raw=1" width="200" height="450">
 notification_page
 <img src="https://www.dropbox.com/s/htgttpb6txdelmz/notification.png?raw=1" width="200" height="450">
+
+trending
+<img src="https://www.dropbox.com/s/i755ebhdhzku6f1/trending.jpg?raw=1" width="200" height="450">
+search_page
+<img src="https://www.dropbox.com/s/0v476cfvq790x62/search_page.jpg?raw=1" width="200" height="450">
+
+search_page(2)
+<img src="https://www.dropbox.com/s/4tcin05ytuy9ezm/search_page%282%29.jpg?raw=1" width="200" height="450">
+listening_page
+<img src="https://www.dropbox.com/s/nr4e3eom1tlcqnt/listening_page.jpg?raw=1" width="200" height="450">
