@@ -21,9 +21,14 @@ class NotificationPage extends StatelessWidget {
               padding: EdgeInsets.symmetric(horizontal: 20.w),
               child: Row(
                 children: [
-                  Icon(
-                    Icons.search_sharp,
-                    size: 28.sp,
+                  IconButton(
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/search_page');
+                    },
+                    icon: Icon(
+                      Icons.search_sharp,
+                      size: 28.sp,
+                    ),
                   ),
                   width10(),
                   Icon(

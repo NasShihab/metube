@@ -7,9 +7,9 @@ import 'package:metube/z_reusable_widget/appbar_custom.dart';
 import 'package:metube/z_reusable_widget/height_weight.dart';
 import '../homepage/home_page_widget.dart';
 
-final trendingItemProvider = StateNotifierProvider.autoDispose<TrendingProvider, int>(
-  (ref) => TrendingProvider(),
-);
+final trendingItemProvider =
+    StateNotifierProvider.autoDispose<TrendingProvider, int>(
+        (ref) => TrendingProvider());
 
 class Trending extends ConsumerWidget {
   const Trending({Key? key}) : super(key: key);
@@ -17,15 +17,21 @@ class Trending extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final selectedIndex = ref.watch(trendingItemProvider);
+
     return Scaffold(
       appBar: customAppBar(
         context,
         appBarTitle: 'Trending',
         actionBarIcons: Row(
           children: [
-            Icon(
-              Icons.location_searching,
-              size: 28.sp,
+            IconButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/search_page');
+              },
+              icon: Icon(
+                Icons.search_sharp,
+                size: 28.sp,
+              ),
             ),
             width10(),
             GestureDetector(

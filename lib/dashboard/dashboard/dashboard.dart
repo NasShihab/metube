@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:metube/dashboard/homepage/home_page_widget.dart';
 import 'package:metube/z_reusable_widget/colors_custom.dart';
 import 'dashboard_provider.dart';
 import '../homepage/home_page.dart';
@@ -16,10 +17,23 @@ class Dashboard extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final List<Widget> screens = [
       const HomePage(),
-      const HomePage(),
-      const HomePage(),
-      const HomePage(),
-      const HomePage(),
+      Scaffold(
+        appBar: homePage(context),
+        body: Center(child: Text('Shorts', style: TextStyle(fontSize: 50.sp))),
+      ),
+      Scaffold(
+        appBar: homePage(context),
+        body: Center(child: Text('Upload', style: TextStyle(fontSize: 50.sp))),
+      ),
+      Scaffold(
+        appBar: homePage(context),
+        body: Center(
+            child: Text('Subscription', style: TextStyle(fontSize: 50.sp))),
+      ),
+      Scaffold(
+        appBar: homePage(context),
+        body: Center(child: Text('Library', style: TextStyle(fontSize: 50.sp))),
+      ),
     ];
 
     final index = ref.watch(dashboardItemProvider);

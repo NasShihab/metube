@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:metube/dashboard/homepage/radio_button_widget_provider.dart';
 import 'package:metube/z_reusable_widget/buttons_custom.dart';
 import 'package:metube/z_reusable_widget/colors_custom.dart';
@@ -12,8 +13,6 @@ final radioItemProvider = StateNotifierProvider<RadioButtonProvider, int>(
 
 class RadioButton extends ConsumerWidget {
   const RadioButton({Key? key}) : super(key: key);
-
-
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -42,9 +41,6 @@ class RadioButton extends ConsumerWidget {
                     groupValue: selectedIndex,
                     onChanged: (value) {
                       ref.read(radioItemProvider.notifier).selected(index);
-                      // setState(() {
-                      //   _value = value as int;
-                      // });
                     },
                   ),
                   Text(
@@ -59,16 +55,27 @@ class RadioButton extends ConsumerWidget {
             children: [
               Expanded(
                 child: customButton(
-                    title: 'Cancel',
-                    onPressed: () {},
-                    backgroundColor: myGrey,
-                    foregroundColor: myPinkAccent,
-                    borderColor: myGrey,
-                    height: 60.h),
+                  title: 'Cancel',
+                  backgroundColor: myGrey,
+                  foregroundColor: myPinkAccent,
+                  borderColor: myGrey,
+                  height: 60.h,
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                ),
               ),
               Expanded(
                 child: customButton(
-                    title: 'Report', onPressed: () {}, height: 60.h),
+                  title: 'Report',
+                  height: 60.h,
+                  onPressed: () {
+                    Fluttertoast.showToast(
+                      msg: 'Reported',
+                      gravity: ToastGravity.CENTER,
+                    );
+                  },
+                ),
               ),
             ],
           ),
