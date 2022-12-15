@@ -1,22 +1,29 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:metube/dashboard/search_bar/filter_menu/custom_dropdown_menu.dart';
 import 'package:metube/z_reusable_widget/height_weight.dart';
-
 import 'filter_menu_provider.dart';
 
-final filterMenuProvider =
+final sortByProvider =
     StateNotifierProvider.autoDispose<SortByProvider, String>(
         (ref) => SortByProvider());
+
+final typeProvider = StateNotifierProvider.autoDispose<TypeProvider, String>(
+    (ref) => TypeProvider());
+
+final dateProvider = StateNotifierProvider.autoDispose<DateProvider, String>(
+    (ref) => DateProvider());
+
+final durationProvider =
+    StateNotifierProvider.autoDispose<DurationProvider, String>(
+        (ref) => DurationProvider());
 
 class FilterMenu extends ConsumerWidget {
   const FilterMenu({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final selectedMenu = ref.watch(filterMenuProvider);
-    double menuWidth = 150.w;
-
     return Padding(
       padding: EdgeInsets.symmetric(vertical: 25.h, horizontal: 25.w),
       child: Column(
@@ -26,100 +33,64 @@ class FilterMenu extends ConsumerWidget {
             style: TextStyle(fontSize: 26.sp, fontWeight: FontWeight.bold),
           ),
           height20(),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              tText(text: 'Sort By'),
-              SizedBox(
-                width: menuWidth,
-                child: DropdownButtonHideUnderline(
-                  child: DropdownButton(
-                      isExpanded: true,
-                      value: selectedMenu,
-                      style: tStyle(),
-                      items: <String>['Relevance', 'View', 'Latest']
-                          .map((String value) => DropdownMenuItem<String>(
-                              value: value, child: Text(value)))
-                          .toList(),
-                      onChanged: (sortby) {
-                        ref.read(filterMenuProvider.notifier).update(sortby);
-                      }),
-                ),
-              )
+          CustomDropDown(
+            text: 'Sort By',
+            menuItems: const [
+              'Relevance',
+              'Upload Date',
+              'View Count',
+              'Rating'
             ],
+            onChanged: (sortby) {
+              ref.read(sortByProvider.notifier).update(sortby);
+            },
+            value: ref.watch(sortByProvider),
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              tText(text: 'Type'),
-              SizedBox(
-                width: menuWidth,
-                child: DropdownButtonHideUnderline(
-                  child: DropdownButton(
-                      isExpanded: true,
-                      value: selectedMenu,
-                      style: tStyle(),
-                      items: <String>['Relevance', 'View', 'Latest']
-                          .map((String value) => DropdownMenuItem<String>(
-                              value: value, child: Text(value)))
-                          .toList(),
-                      onChanged: (sortby) {
-                        ref.read(filterMenuProvider.notifier).update(sortby);
-                      }),
-                ),
-              )
-            ],
+          CustomDropDown(
+            text: 'Type',
+            menuItems: const ['All', 'Video', 'Channel', 'Playlist', 'Music'],
+            onChanged: (sortby) {
+              ref.read(typeProvider.notifier).update(sortby);
+            },
+            value: ref.watch(typeProvider),
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              tText(text: 'Upload Date'),
-              SizedBox(
-                width: menuWidth,
-                child: DropdownButtonHideUnderline(
-                  child: DropdownButton(
-                      isExpanded: true,
-                      value: selectedMenu,
-                      style: tStyle(),
-                      items: <String>['Relevance', 'View', 'Latest']
-                          .map((String value) => DropdownMenuItem<String>(
-                              value: value, child: Text(value)))
-                          .toList(),
-                      onChanged: (sortby) {
-                        ref.read(filterMenuProvider.notifier).update(sortby);
-                      }),
-                ),
-              )
+          CustomDropDown(
+            text: 'Update Date',
+            menuItems: const [
+              'Any Time',
+              'Last hour',
+              'Today',
+              'This week',
+              'This month',
+              'This year'
             ],
+            onChanged: (sortby) {
+              ref.read(dateProvider.notifier).update(sortby);
+            },
+            value: ref.watch(dateProvider),
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              tText(text: 'Duration'),
-              SizedBox(
-                width: menuWidth,
-                child: DropdownButtonHideUnderline(
-                  child: DropdownButton(
-                      isExpanded: true,
-                      value: selectedMenu,
-                      style: tStyle(),
-                      items: <String>['Relevance', 'View', 'Latest']
-                          .map((String value) => DropdownMenuItem<String>(
-                              value: value, child: Text(value)))
-                          .toList(),
-                      onChanged: (sortby) {
-                        ref.read(filterMenuProvider.notifier).update(sortby);
-                      }),
-                ),
-              )
+          CustomDropDown(
+            text: 'Duration',
+            menuItems: const [
+              'Any',
+              'Under 4 minutes',
+              '4-20 minutes',
+              'Over 20 minutes'
             ],
+            onChanged: (sortby) {
+              ref.read(durationProvider.notifier).update(sortby);
+            },
+            value: ref.watch(durationProvider),
           ),
           height20(),
           Row(
             children: [
-              Text('More Features',style: TextStyle(fontSize: 20.sp, fontWeight: FontWeight.bold),),
+              Text(
+                'More Features',
+                style: TextStyle(fontSize: 20.sp, fontWeight: FontWeight.bold),
+              ),
             ],
-          )
+          ),
         ],
       ),
     );
