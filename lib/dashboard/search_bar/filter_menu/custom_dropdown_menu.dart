@@ -32,7 +32,10 @@ class CustomDropDown extends StatelessWidget {
                 child: DropdownButton(
                   isExpanded: true,
                   value: value, //ref.watch(filterMenuProvider),
-                  style: tStyle(),
+                  style: TextStyle(
+                      fontSize: 20.sp,
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold),
                   //<String>['Relevance', 'View', 'Latest']
                   items: menuItems
                       .map((String value) => DropdownMenuItem<String>(
@@ -50,7 +53,4 @@ class CustomDropDown extends StatelessWidget {
       ],
     );
   }
-
-  TextStyle tStyle() => TextStyle(
-      fontSize: 20.sp, color: Colors.black, fontWeight: FontWeight.bold);
 }

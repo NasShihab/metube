@@ -48,7 +48,13 @@ class FilterMenu extends ConsumerWidget {
           ),
           CustomDropDown(
             text: 'Type',
-            menuItems: const ['All', 'Video', 'Channel', 'Playlist', 'Music'],
+            menuItems: const [
+              'All',
+              'Video',
+              'Channel',
+              'Playlist',
+              'Music',
+            ],
             onChanged: (sortby) {
               ref.read(typeProvider.notifier).update(sortby);
             },
@@ -62,7 +68,7 @@ class FilterMenu extends ConsumerWidget {
               'Today',
               'This week',
               'This month',
-              'This year'
+              'This year',
             ],
             onChanged: (sortby) {
               ref.read(dateProvider.notifier).update(sortby);
@@ -75,7 +81,7 @@ class FilterMenu extends ConsumerWidget {
               'Any',
               'Under 4 minutes',
               '4-20 minutes',
-              'Over 20 minutes'
+              'Over 20 minutes',
             ],
             onChanged: (sortby) {
               ref.read(durationProvider.notifier).update(sortby);
@@ -95,15 +101,4 @@ class FilterMenu extends ConsumerWidget {
       ),
     );
   }
-
-  TextStyle tStyle() => TextStyle(
-      fontSize: 20.sp, color: Colors.black, fontWeight: FontWeight.bold);
-
-  Text tText({
-    required String text,
-  }) =>
-      Text(
-        text,
-        style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.bold),
-      );
 }
