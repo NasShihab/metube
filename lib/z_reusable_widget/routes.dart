@@ -18,6 +18,7 @@ import '../onboarding/starter_screens/onboard_page.dart';
 import '../auth/welcome.dart';
 
 var myRoutes = <String, WidgetBuilder>{
+
   '/': (context) =>  Onboard_Page(),
   '/dashboard': (context) => const Dashboard(),
   '/welcome': (context) => const Welcome(),
