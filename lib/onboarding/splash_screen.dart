@@ -1,10 +1,25 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../z_reusable_widget/height_weight.dart';
 import '../z_reusable_widget/text_custom.dart';
 
-class FirstScreen extends StatelessWidget {
-  const FirstScreen({Key? key}) : super(key: key);
+class SplashScreen extends StatefulWidget {
+  const SplashScreen({Key? key}) : super(key: key);
+
+  @override
+  State<SplashScreen> createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends State<SplashScreen> {
+  @override
+  void initState() {
+    super.initState();
+    Timer(Duration(seconds: 3), () {
+      Navigator.pushReplacementNamed(context, '/onboard_page');
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -29,15 +44,10 @@ class FirstScreen extends StatelessWidget {
         ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
-      floatingActionButton: GestureDetector(
-        onTap: (){
-          Navigator.pushNamed(context, '/onboard_page');
-        },
-        child: Image(
-          height: 70.h,
-          width: 70.w,
-          image: const AssetImage('assets/icons/Loading.gif'),
-        ),
+      floatingActionButton: Image(
+        height: 100.h,
+        width: 100.w,
+        image: const AssetImage('assets/icons/Loading.gif'),
       ),
     );
   }

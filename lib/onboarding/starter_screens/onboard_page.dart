@@ -41,7 +41,7 @@ class Onboard_Page extends ConsumerWidget {
             ),
             Positioned(
               bottom: 100,
-              left: MediaQuery.of(context).size.width * .5.w,
+              left: MediaQuery.of(context).size.width * .45.w,
               child: Wrap(
                 spacing: 5.w,
                 children: List.generate(
@@ -51,11 +51,11 @@ class Onboard_Page extends ConsumerWidget {
                       ref.read(onBoardingNotifier.notifier).onChangeItem(index);
                     },
                     child: Container(
-                      height: 15.h,
-                      width: 15.w,
+                      height: 10.h,
+                      width: selectedItem == index ? 40.w : 15.w,
                       decoration: BoxDecoration(
-                          color: selectedItem == index ? myPinkAccent : myGrey,
-                          border: Border.all(color: Colors.black),
+                          color: selectedItem == index ? myPinkAccent : Colors.grey[600],
+                          // border: Border.all(color: Colors.black),
                           borderRadius: BorderRadius.circular(25.r)),
                     ),
                   ),
