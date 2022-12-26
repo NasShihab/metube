@@ -16,7 +16,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    Timer(Duration(seconds: 3), () {
+    Timer(Duration(seconds: 5), () {
       Navigator.pushReplacementNamed(context, '/onboard_page');
     });
   }
@@ -47,7 +47,7 @@ class _SplashScreenState extends State<SplashScreen> {
       floatingActionButton: Image(
         height: 100.h,
         width: 100.w,
-        image: const AssetImage('assets/icons/Loading.gif'),
+        image: const AssetImage('assets/images/loading2.gif'),
       ),
     );
   }
