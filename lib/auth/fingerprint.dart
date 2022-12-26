@@ -50,7 +50,9 @@ class Fingerprint extends StatelessWidget {
               foregroundColor: myPinkAccent,
               borderColor: myGrey,
               title: 'Skip',
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushNamed(context, '/dashboard');
+              },
             ),
           ),
           Expanded(
@@ -93,8 +95,14 @@ class Fingerprint extends StatelessWidget {
                                   child: CircleAvatar(
                                       radius: 40.r,
                                       backgroundColor: Colors.transparent,
-                                      backgroundImage: const AssetImage('assets/images/loading.png')),
+                                      backgroundImage: const AssetImage(
+                                          'assets/images/loading.png')),
                                 ),
+                                customButton(
+                                    onPressed: () {
+                                      Navigator.pushNamed(context, '/dashboard');
+                                    },
+                                    title: 'Ok'),
                               ],
                             ),
                           ),

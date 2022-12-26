@@ -13,18 +13,16 @@ import '../auth/fingerprint.dart';
 import '../dashboard/homepage/home_page.dart';
 import '../dashboard/search_bar/listening/listening_page.dart';
 import '../dashboard/trending/trending.dart';
-import '../start_screen/fourth_screen.dart';
-import '../start_screen/second_screen.dart';
-import '../start_screen/third_screen.dart';
-import '../start_screen/welcome.dart';
+import '../onboarding/first_screen.dart';
+import '../onboarding/starter_screens/onboard_page.dart';
+import '../auth/welcome.dart';
 
 var myRoutes = <String, WidgetBuilder>{
-  '/': (context) => const Dashboard(),
+  '/': (context) =>  Onboard_Page(),
   '/dashboard': (context) => const Dashboard(),
-  '/second_screen': (context) => const SecondScreen(),
-  '/third_screen': (context) => const ThirdScreen(),
-  '/fourth_screen': (context) => const FourthScreen(),
   '/welcome': (context) => const Welcome(),
+  '/firstScreen': (context) => const FirstScreen(),
+  '/onboard_page': (context) =>  Onboard_Page(),
   '/login': (context) => const Login(),
   '/sign_up': (context) => const SignUp(),
   '/fill_profile': (context) => const FillProfile(),

@@ -104,17 +104,17 @@ class CreateNewPassword extends StatelessWidget {
                             ),
                           ),
                           Flexible(
-                            child: GestureDetector(
-                              onTap: (){
-                                Navigator.pushNamed(context, '/home_page');
-                              },
-                              child: CircleAvatar(
-                                  radius: 40.r,
-                                  backgroundColor: Colors.transparent,
-                                  backgroundImage: const AssetImage(
-                                      'assets/images/loading.png')),
-                            ),
+                            child: CircleAvatar(
+                                radius: 40.r,
+                                backgroundColor: Colors.transparent,
+                                backgroundImage: const AssetImage(
+                                    'assets/images/loading.png')),
                           ),
+                          customButton(
+                              onPressed: () {
+                                Navigator.pushNamed(context, '/dashboard');
+                              },
+                              title: 'Ok'),
                         ],
                       ),
                     ),

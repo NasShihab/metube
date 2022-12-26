@@ -1,49 +1,64 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:metube/dashboard/homepage/more_option_widget.dart';
-
-import '../../z_reusable_widget/appbar_custom.dart';
 import '../../z_reusable_widget/colors_custom.dart';
 import '../../z_reusable_widget/height_weight.dart';
 import '../../z_reusable_widget/text_custom.dart';
 
-AppBar homePage(BuildContext context) => customAppBar(
-      context,
-      leadIcon: Icons.video_camera_back,
-      iconColor: myPinkAccent,
-      iconSize: 30,
-      titleSize: 30,
-      appBarTitle: 'MeTube',
-      actionBarIcons: Row(
-        children: [
-          GestureDetector(
-            onTap: (){
-              Navigator.pushNamed(context, '/search_page');
-            },
-            child: Icon(
-              Icons.search_outlined,
-              size: 28.sp,
-            ),
-          ),
-          width10(),
-          GestureDetector(
-            onTap: () {
-              Navigator.pushNamed(context, '/notification_page');
-            },
-            child: Icon(
-              Icons.notifications_active,
-              size: 28.sp,
-            ),
-          ),
-          width10(),
-          CircleAvatar(
-            backgroundColor: myPinkAccent,
-            radius: 14.r,
-            backgroundImage: const AssetImage('assets/images/profile2.png'),
-          ),
-          width10(),
-        ],
+AppBar homePage(BuildContext context) => AppBar(
+      title: Text(
+        'MeTube',
+        style: TextStyle(
+          fontSize: 30.sp,
+          fontWeight: FontWeight.bold,
+        ),
       ),
+      leading: Icon(
+        Icons.video_camera_back,
+        size: 30.sp,
+      ),
+      actions: [
+        Row(
+          children: [
+            GestureDetector(
+              onTap: () {
+                Navigator.pushNamed(context, '/search_page');
+              },
+              child: Icon(
+                Icons.search_outlined,
+                size: 28.sp,
+              ),
+            ),
+            width10(),
+            GestureDetector(
+              onTap: () {
+                Navigator.pushNamed(context, '/notification_page');
+              },
+              child: Icon(
+                Icons.notifications_active,
+                size: 28.sp,
+              ),
+            ),
+            width10(),
+            GestureDetector(
+              onTap: () {
+                Fluttertoast.showToast(
+                    msg: 'Profile',
+                    backgroundColor: myPinkAccent,
+                    fontSize: 40.sp,
+                    gravity: ToastGravity.CENTER);
+              },
+              child: CircleAvatar(
+                backgroundColor: myPinkAccent,
+                radius: 14.r,
+                backgroundImage: const AssetImage('assets/images/profile2.png'),
+              ),
+            ),
+            width10(),
+          ],
+        ),
+      ],
     );
 
 Widget homeCategory(BuildContext context) => SingleChildScrollView(
@@ -129,13 +144,13 @@ Column customFeed(BuildContext context) => Column(
             ),
             width5(),
             GestureDetector(
-              onTap: (){
-                moreOption(context);
-              },
+                onTap: () {
+                  moreOption(context);
+                },
                 child: Icon(
-              Icons.more_vert,
-              color: myBlack,
-            )),
+                  Icons.more_vert,
+                  color: myBlack,
+                )),
           ],
         ),
         height10(),

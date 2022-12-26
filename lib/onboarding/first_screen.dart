@@ -31,7 +31,7 @@ class FirstScreen extends StatelessWidget {
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: GestureDetector(
         onTap: (){
-          Navigator.pushNamed(context, '/second_screen');
+          Navigator.pushNamed(context, '/onboard_page');
         },
         child: Image(
           height: 70.h,
