@@ -92,7 +92,6 @@ Widget homeCategory(BuildContext context) => SingleChildScrollView(
 Column customFeed(BuildContext context) => Column(
       children: [
         Stack(
-          alignment: Alignment(.95.w, .95.h),
           children: [
             ClipRRect(
               borderRadius: BorderRadius.circular(40.r),
@@ -100,13 +99,17 @@ Column customFeed(BuildContext context) => Column(
                 image: AssetImage('assets/images/image1.jpg'),
               ),
             ),
-            customBorderText(
-              backGroundColor: Colors.black,
-              textColor: Colors.white,
-              myText: '18 : 27',
-              fontSize: 10,
-              borderColor: Colors.transparent,
-              borderRadius: 10.r,
+            Positioned(
+              right: 15.w,
+              bottom: 10.h,
+              child: customBorderText(
+                backGroundColor: Colors.black,
+                textColor: Colors.white,
+                myText: '18 : 27',
+                fontSize: 10,
+                borderColor: Colors.transparent,
+                borderRadius: 10.r,
+              ),
             )
           ],
         ),
@@ -161,7 +164,6 @@ Column customFeedShorts(BuildContext context) => Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Stack(
-          alignment: Alignment(.95.w, .95.h),
           children: [
             ClipRRect(
               borderRadius: BorderRadius.circular(40.r),
@@ -169,13 +171,17 @@ Column customFeedShorts(BuildContext context) => Column(
                 image: AssetImage('assets/images/image1.jpg'),
               ),
             ),
-            customBorderText(
-              backGroundColor: Colors.black,
-              textColor: Colors.white,
-              myText: '18 : 27',
-              fontSize: 10,
-              borderColor: Colors.transparent,
-              borderRadius: 10.r,
+            Positioned(
+              right: 15.w,
+              bottom: 10.h,
+              child: customBorderText(
+                backGroundColor: Colors.black,
+                textColor: Colors.white,
+                myText: '18 : 27',
+                fontSize: 10,
+                borderColor: Colors.transparent,
+                borderRadius: 10.r,
+              ),
             )
           ],
         ),
