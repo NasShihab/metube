@@ -13,18 +13,20 @@ final itemProvider = StateNotifierProvider.autoDispose<TrendingProvider, int>(
     (ref) => TrendingProvider());
 
 final sortByProvider =
-    StateNotifierProvider.autoDispose<SortByProvider, String>(
-        (ref) => SortByProvider());
+    StateNotifierProvider.autoDispose<DropDownProvider, String>(
+        (ref) => DropDownProvider('Relevance'));
 
-final typeProvider = StateNotifierProvider.autoDispose<TypeProvider, String>(
-    (ref) => TypeProvider());
+final typeProvider =
+    StateNotifierProvider.autoDispose<DropDownProvider, String>(
+        (ref) => DropDownProvider('All'));
 
-final dateProvider = StateNotifierProvider.autoDispose<DateProvider, String>(
-    (ref) => DateProvider());
+final dateProvider =
+    StateNotifierProvider.autoDispose<DropDownProvider, String>(
+        (ref) => DropDownProvider('Any Time'));
 
 final durationProvider =
-    StateNotifierProvider.autoDispose<DurationProvider, String>(
-        (ref) => DurationProvider());
+    StateNotifierProvider.autoDispose<DropDownProvider, String>(
+        (ref) => DropDownProvider('Any'));
 
 class FilterMenu extends ConsumerWidget {
   const FilterMenu({Key? key}) : super(key: key);

@@ -9,9 +9,11 @@ import '../../z_reusable_widget/height_weight.dart';
 final searchIndexProvider = StateNotifierProvider<SearchPageProvider, List>(
     (ref) => SearchPageProvider());
 
-AppBar appBarModified(
+AppBar customSearchBar(
   BuildContext context, {
   required Function(String) onChanged,
+  required Widget prefixIcon,
+  String hintText = 'Search',
 }) =>
     AppBar(
       leading: GestureDetector(
@@ -40,7 +42,7 @@ AppBar appBarModified(
                 onChanged:
                     onChanged, //ref.read(searchIndexProvider.notifier).updateSearch(value);
                 decoration: InputDecoration(
-                  hintText: 'Search',
+                  hintText: hintText,
                   hintStyle: const TextStyle(
                     fontWeight: FontWeight.bold,
                   ),
@@ -63,13 +65,7 @@ AppBar appBarModified(
                       size: 30.sp,
                     ),
                   ),
-                  prefixIcon: IconButton(
-                    onPressed: () {},
-                    icon: Icon(
-                      Icons.search_rounded,
-                      size: 30.sp,
-                    ),
-                  ),
+                  prefixIcon: prefixIcon,
                   border: InputBorder.none,
                 ),
               ),

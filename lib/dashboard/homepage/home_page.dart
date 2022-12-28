@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:metube/dashboard/homepage/news_feed.dart';
 import 'home_page_widget.dart';
 
 class HomePage extends StatelessWidget {
@@ -8,7 +9,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: homePage(context),
+      appBar: homePageAppBar(context),
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 25.w),
@@ -18,13 +19,16 @@ class HomePage extends StatelessWidget {
                 padding: EdgeInsets.symmetric(vertical: 10.h),
                 child: homeCategory(context),
               ),
+              // Expanded(
+              //   child: ListView.builder(
+              //     shrinkWrap: true,
+              //     itemCount: 5,
+              //     itemBuilder: (context, index) => NewsFeed(),
+              //   ),
+              // ),
               Expanded(
-                child: ListView.builder(
-                  shrinkWrap: true,
-                  itemCount: 5,
-                  itemBuilder: (context, index) => customFeedShorts(context),
-                ),
-              ),
+                child: NewsFeed(),
+              )
             ],
           ),
         ),

@@ -18,20 +18,20 @@ class Dashboard extends ConsumerWidget {
     final List<Widget> screens = [
       const HomePage(),
       Scaffold(
-        appBar: homePage(context),
+        appBar: homePageAppBar(context),
         body: Center(child: Text('Shorts', style: TextStyle(fontSize: 50.sp))),
       ),
       Scaffold(
-        appBar: homePage(context),
+        appBar: homePageAppBar(context),
         body: Center(child: Text('Upload', style: TextStyle(fontSize: 50.sp))),
       ),
       Scaffold(
-        appBar: homePage(context),
+        appBar: homePageAppBar(context),
         body: Center(
             child: Text('Subscription', style: TextStyle(fontSize: 50.sp))),
       ),
       Scaffold(
-        appBar: homePage(context),
+        appBar: homePageAppBar(context),
         body: Center(child: Text('Library', style: TextStyle(fontSize: 50.sp))),
       ),
     ];

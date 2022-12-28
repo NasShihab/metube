@@ -18,7 +18,7 @@ import '../onboarding/starter_screens/onboard_page.dart';
 import '../auth/welcome.dart';
 
 var myRoutes = <String, WidgetBuilder>{
-  '/': (context) => SplashScreen(),
+  '/': (context) => Dashboard(),
   '/splash_screen': (context) => const SplashScreen(),
   '/onboard_page': (context) => Onboard_Page(),
   '/dashboard': (context) => const Dashboard(),
@@ -37,3 +37,5 @@ var myRoutes = <String, WidgetBuilder>{
   '/search_page': (context) => const SearchPage(),
   '/listening_page': (context) => const ListeningPage(),
 };
+
+//ToDO Listen Page fix Scaffold
