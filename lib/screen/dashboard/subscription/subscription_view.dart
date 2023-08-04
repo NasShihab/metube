@@ -4,7 +4,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:metube/screen/dashboard/homepage/home_page_view/home_page_widget.dart';
 import 'package:metube/screen/dashboard/homepage/news_feed/news_feed.dart';
+import 'package:metube/screen/dashboard/subscription/view_all_subscriber.dart';
 import 'package:metube/z_reusable_widget/height_weight.dart';
+import 'package:metube/z_reusable_widget/push_navigation.dart';
 import 'package:metube/z_reusable_widget/text_material/text_theme.dart';
 
 import '../../../z_reusable_widget/colors_custom.dart';
@@ -65,7 +67,10 @@ class SubscriptionView extends StatelessWidget {
                     style: bodyLarge(context),
                   ),
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      pushNavigation(context,
+                          pushNav: const ViewAllSubscriber());
+                    },
                     child: Text(
                       'View All',
                       style: bodyMedium(context)?.copyWith(color: myPinkAccent),
@@ -90,7 +95,7 @@ class SubscriptionView extends StatelessWidget {
               height15(),
               HorizontalCategoryWidget(list: subList),
               height15(),
-              NewsFeed(),
+              const NewsFeed(),
             ],
           ),
         ),
@@ -126,7 +131,7 @@ Widget circleWithText(BuildContext context) {
   return Column(
     children: [
       CircleAvatar(
-        backgroundImage: AssetImage(
+        backgroundImage: const AssetImage(
           'assets/icons/netflix.png',
         ),
         backgroundColor: Colors.black,

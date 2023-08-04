@@ -36,6 +36,7 @@ class _MyAppState extends State<MyApp> {
     );
   }
 }
+//flutter build apk --release --split-per-abi
 
 // ToDo : Video Comment Part
 // ToDo : Live Chat on Comment
