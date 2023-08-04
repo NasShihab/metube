@@ -166,10 +166,22 @@ class VideoTab extends StatelessWidget {
 
   List<HorizontalCategoryModel> videoCatList(BuildContext context) {
     return [
-      HorizontalCategoryModel(title: 'SortBy'),
-      HorizontalCategoryModel(title: 'Videos'),
-      HorizontalCategoryModel(title: 'Shorts'),
-      HorizontalCategoryModel(title: 'live'),
+      HorizontalCategoryModel(
+        title: 'SortBy',
+        function: (BuildContext context) {},
+      ),
+      HorizontalCategoryModel(
+        title: 'Videos',
+        function: (BuildContext context) {},
+      ),
+      HorizontalCategoryModel(
+        title: 'Shorts',
+        function: (BuildContext context) {},
+      ),
+      HorizontalCategoryModel(
+        title: 'live',
+        function: (BuildContext context) {},
+      ),
     ];
   }
 }
@@ -222,7 +234,8 @@ class PlayListTab extends StatelessWidget {
                         child: Stack(
                           children: [
                             Image(
-                              image: const AssetImage('assets/images/image1.jpg'),
+                              image:
+                                  const AssetImage('assets/images/image1.jpg'),
                               height: 100.h,
                               width: double.infinity,
                               fit: BoxFit.fill,

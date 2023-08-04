@@ -29,7 +29,8 @@ class ForgetPassword extends StatelessWidget {
                 style: bodyLarge(context),
               ),
             ),
-            myPointBar(context,
+            myPointBar(
+              context,
               icon: Icons.message,
               text1: 'via SMS',
               text2: '017xxx6986',
@@ -53,7 +54,8 @@ class ForgetPassword extends StatelessWidget {
   }
 }
 
-Widget myPointBar(BuildContext context, {
+Widget myPointBar(
+  BuildContext context, {
   required var icon,
   String text1 = 'Text 1',
   String text2 = 'Text 2',
@@ -61,11 +63,11 @@ Widget myPointBar(BuildContext context, {
     Row(
       children: [
         CircleAvatar(
-          radius: 50.r,
+          radius: 35.r,
           backgroundColor: myGrey,
           child: Icon(
             icon,
-            size: 40.sp,
+            size: 30.sp,
             color: myPinkAccent,
           ),
         ),
@@ -78,7 +80,8 @@ Widget myPointBar(BuildContext context, {
             children: [
               Text(
                 text1,
-                style: bodyMedium(context)?.copyWith(fontWeight: FontWeight.bold),
+                style:
+                    bodyMedium(context)?.copyWith(fontWeight: FontWeight.bold),
               ),
               SizedBox(width: 10.w),
               Text(

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:metube/screen/dashboard/library/library_view.dart';
 import 'package:metube/screen/dashboard/shorts/page_view_builder.dart';
 import 'package:metube/screen/dashboard/subscription/subscription_view.dart';
 import 'package:metube/screen/dashboard/upload/create_video_shorts_bottom_sheet.dart';
@@ -46,10 +47,8 @@ class Dashboard extends ConsumerWidget {
       ),
       //4
       SubscriptionView(),
-      //5
-      Scaffold(
-        body: Center(child: Text('Library', style: TextStyle(fontSize: 50.sp))),
-      ),
+      //5 Library
+      const LibraryView(),
     ];
 
     final index = ref.watch(dashboardItemProvider);
