@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:metube/screen/dashboard/library/download/download_view.dart';
 import 'package:metube/screen/dashboard/library/history/history_view.dart';
+import 'package:metube/screen/dashboard/library/new_playList/new_playlist.dart';
+import 'package:metube/screen/dashboard/library/watch_later/watch_later_view.dart';
 import 'package:metube/screen/dashboard/library/your_videos/your_videos_view.dart';
 import 'package:metube/z_reusable_widget/colors_custom.dart';
 import 'package:metube/z_reusable_widget/height_weight.dart';
@@ -56,7 +58,10 @@ class LibraryView extends StatelessWidget {
                 ),
                 trailing: TextButton(
                   onPressed: () {
-                    pushNavigation(context, pushNav: const HistoryView());
+                    pushNavigation(
+                      context,
+                      pushNav: const HistoryView(),
+                    );
                   },
                   child: Text(
                     'View All',
@@ -183,13 +188,25 @@ class LibraryView extends StatelessWidget {
                 context,
                 icon: CupertinoIcons.add_circled_solid,
                 title: 'New Playlist',
-                onTap: () {},
+                onTap: () {
+                  showModalBottomSheet(
+                    context: context,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(35.r),
+                    ),
+                    builder: (context) {
+                      return const NewPlayList();
+                    },
+                  );
+                },
               ),
               customCircleAvatarWithTitle(
                 context,
                 icon: CupertinoIcons.clock_fill,
                 title: 'Watch Later',
-                onTap: () {},
+                onTap: () {
+                  pushNavigation(context, pushNav: const WatchLaterView());
+                },
               ),
               customCircleAvatarWithTitle(
                 context,
