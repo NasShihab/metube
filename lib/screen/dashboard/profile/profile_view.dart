@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-
+import 'package:metube/screen/dashboard/profile/profile_setting_list.dart';
 import '../../../z_reusable_widget/colors_custom.dart';
 import '../../../z_reusable_widget/height_weight.dart';
 import '../../../z_reusable_widget/text_material/text_theme.dart';
@@ -101,56 +101,31 @@ class ProfileView extends StatelessWidget {
                     ),
                   ),
                 ),
-                customTile(
-                  context,
-                  leadingIcon: CupertinoIcons.play_circle,
-                  text: 'Your Channel',
-                  onTap: () {},
-                ),
-                customTile(
-                  context,
-                  leadingIcon: Icons.shield_moon,
-                  text: 'Turn on Incognito',
-                  onTap: () {},
-                ),
-                customTile(
-                  context,
-                  leadingIcon: CupertinoIcons.profile_circled,
-                  text: 'Your Account',
-                  onTap: () {},
-                ),
-                customTile(
-                  context,
-                  leadingIcon: CupertinoIcons.clock,
-                  text: 'Time Watched',
-                  onTap: () {},
-                ),
-                customTile(
-                  context,
-                  leadingIcon: CupertinoIcons.eye,
-                  text: 'Dark Mode',
-                  onTap: () {},
-                ),
-                customTile(
-                  context,
-                  leadingIcon: CupertinoIcons.shield_lefthalf_fill,
-                  text: 'Security',
-                  onTap: () {},
-                ),
-                customTile(
-                  context,
-                  leadingIcon: CupertinoIcons.settings_solid,
-                  text: 'Settings',
-                  onTap: () {},
-                ),
-                customTile(
-                  context,
-                  leadingIcon: CupertinoIcons.info,
-                  text: 'Help Center',
-                  onTap: () {},
+                Column(
+                  children: List.generate(profileSettingsList(context).length,
+                      (index) {
+                    return InkWell(
+                      onTap: profileSettingsList(context)[index].onTap,
+                      child: ListTile(
+                        leading: Icon(
+                          profileSettingsList(context)[index].icon,
+                          size: 25.sp,
+                          color: Theme.of(context).primaryColor,
+                        ),
+                        title: Text(
+                          profileSettingsList(context)[index].title,
+                          style: bodyMedium(context),
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                        trailing: Icon(Icons.arrow_forward_ios_sharp,
+                            size: 20.sp, color: Theme.of(context).primaryColor),
+                        contentPadding: EdgeInsets.zero,
+                      ),
+                    );
+                  }),
                 ),
                 InkWell(
-                  onTap: (){},
+                  onTap: () {},
                   child: ListTile(
                     leading: Icon(
                       Icons.logout,
@@ -172,30 +147,4 @@ class ProfileView extends StatelessWidget {
       ),
     );
   }
-}
-
-Widget customTile(
-  BuildContext context, {
-  required var leadingIcon,
-  required String text,
-  required void Function() onTap,
-}) {
-  return InkWell(
-    onTap: onTap,
-    child: ListTile(
-      leading: Icon(
-        leadingIcon,
-        size: 25.sp,
-        color: Theme.of(context).primaryColor,
-      ),
-      title: Text(
-        text,
-        style: bodyMedium(context),
-        overflow: TextOverflow.ellipsis,
-      ),
-      trailing: Icon(Icons.arrow_forward_ios_sharp,
-          size: 20.sp, color: Theme.of(context).primaryColor),
-      contentPadding: EdgeInsets.zero,
-    ),
-  );
 }
