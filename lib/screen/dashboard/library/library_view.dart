@@ -6,6 +6,7 @@ import 'package:metube/screen/dashboard/library/history/history_view.dart';
 import 'package:metube/screen/dashboard/library/new_playList/new_playlist.dart';
 import 'package:metube/screen/dashboard/library/watch_later/watch_later_view.dart';
 import 'package:metube/screen/dashboard/library/your_videos/your_videos_view.dart';
+import 'package:metube/screen/dashboard/profile/profile_view.dart';
 import 'package:metube/z_reusable_widget/colors_custom.dart';
 import 'package:metube/z_reusable_widget/height_weight.dart';
 import 'package:metube/z_reusable_widget/push_navigation.dart';
@@ -37,9 +38,14 @@ class LibraryView extends StatelessWidget {
             color: primeColor(context),
           ),
           width10(),
-          CircleAvatar(
-            backgroundImage: const AssetImage('assets/images/portrait2.jpg'),
-            radius: 15.r,
+          InkWell(
+            onTap: (){
+              pushNavigation(context, pushNav: const ProfileView());
+            },
+            child: CircleAvatar(
+              backgroundImage: const AssetImage('assets/images/portrait2.jpg'),
+              radius: 15.r,
+            ),
           ),
           width15(),
         ],

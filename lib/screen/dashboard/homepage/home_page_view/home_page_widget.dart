@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:metube/screen/dashboard/profile/profile_view.dart';
+import 'package:metube/z_reusable_widget/push_navigation.dart';
 import 'package:metube/z_reusable_widget/text_material/text_theme.dart';
 import '../../../../z_reusable_widget/colors_custom.dart';
 import '../../../../z_reusable_widget/height_weight.dart';
@@ -59,6 +61,7 @@ AppBar homePageAppBar(BuildContext context) => AppBar(
                     backgroundColor: myPinkAccent,
                     fontSize: 40.sp,
                     gravity: ToastGravity.CENTER);
+                pushNavigation(context, pushNav: const ProfileView());
               },
               child: CircleAvatar(
                 backgroundColor: myPinkAccent,
