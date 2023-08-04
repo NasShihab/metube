@@ -100,7 +100,7 @@ class IconTextWidget extends StatelessWidget {
 
 class IconText {
   String text;
-  var icon;
+  dynamic icon;
   void Function() onTap;
 
   IconText({

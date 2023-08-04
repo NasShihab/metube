@@ -375,9 +375,9 @@ class AboutWidgetModel {
     this.textColor,
   });
 
-  var icon;
+  dynamic icon;
   String text;
-  var textColor;
+  dynamic textColor;
 }
 
 Widget linkWidget(
