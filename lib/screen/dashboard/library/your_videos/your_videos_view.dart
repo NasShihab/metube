@@ -37,12 +37,14 @@ class YourVideosView extends StatelessWidget {
       ),
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 15.w, vertical: 15.w),
+          padding: EdgeInsets.symmetric(horizontal: 15.w),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               HorizontalCategoryWidget(
-                  list: const VideoTab().videoCatList(context)),
+                list: const VideoTab().videoCatList(context),
+              ),
+              height15(),
               Expanded(
                 child: ListView.separated(
                   shrinkWrap: true,
@@ -69,16 +71,30 @@ class YourVideosView extends StatelessWidget {
                           child: ListTile(
                             title: Text(
                               'International Music Remix 2022 and many more',
-                              style: bodyMedium(context),
-                              maxLines: 3,
+                              style: bodySmall(context)?.copyWith(
+                                  fontWeight: FontWeight.bold,
+                                  color: primeColor(context)),
+                              maxLines: 2,
                               overflow: TextOverflow.ellipsis,
                             ),
-                            subtitle: FittedBox(
-                              fit: BoxFit.scaleDown,
-                              child: Text(
-                                'World of music · 6.5M views',
-                                style: bodySmall(context),
-                              ),
+                            subtitle: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Padding(
+                                  padding: EdgeInsets.symmetric(vertical: 3.h),
+                                  child: Text(
+                                    '708 views · 6 days ago',
+                                    style: bodySmall(context)
+                                        ?.copyWith(fontSize: 14.sp),
+                                    maxLines: 1,
+                                    overflow: TextOverflow.ellipsis,
+                                  ),
+                                ),
+                                Icon(
+                                  CupertinoIcons.lock,
+                                  color: primeColor(context),
+                                ),
+                              ],
                             ),
                             trailing: Icon(
                               Icons.more_vert_rounded,

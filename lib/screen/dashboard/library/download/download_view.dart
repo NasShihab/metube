@@ -1,20 +1,19 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import '../../../../z_reusable_widget/colors_custom.dart';
 import '../../../../z_reusable_widget/height_weight.dart';
 import '../../../../z_reusable_widget/text_material/text_theme.dart';
 
-class HistoryView extends StatelessWidget {
-  const HistoryView({super.key});
+class DownloadView extends StatelessWidget {
+  const DownloadView({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'History',
+          'Download',
           style: titleLarge(context)?.copyWith(color: myPinkAccent),
         ),
         leading: Icon(
@@ -68,12 +67,23 @@ class HistoryView extends StatelessWidget {
                         maxLines: 3,
                         overflow: TextOverflow.ellipsis,
                       ),
-                      subtitle: FittedBox(
-                        fit: BoxFit.scaleDown,
-                        child: Text(
-                          'World of music · 6.5M views',
-                          style: bodySmall(context)?.copyWith(fontSize: 14.sp),
-                        ),
+                      subtitle: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'BBC Earth',
+                            style: bodySmall(context)
+                                ?.copyWith(color: primeColor(context)),
+                          ),
+                          FittedBox(
+                            fit: BoxFit.scaleDown,
+                            child: Text(
+                              'World of music · 6.5M views',
+                              style:
+                                  bodySmall(context)?.copyWith(fontSize: 14.sp),
+                            ),
+                          ),
+                        ],
                       ),
                       trailing: Icon(
                         Icons.more_vert_rounded,

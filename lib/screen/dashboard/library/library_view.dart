@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:metube/screen/dashboard/library/download/download_view.dart';
 import 'package:metube/screen/dashboard/library/history/history_view.dart';
 import 'package:metube/screen/dashboard/library/your_videos/your_videos_view.dart';
 import 'package:metube/z_reusable_widget/colors_custom.dart';
@@ -157,7 +158,9 @@ class LibraryView extends StatelessWidget {
                 context,
                 icon: CupertinoIcons.arrow_down_circle_fill,
                 title: 'Downloads',
-                onTap: () {},
+                onTap: () {
+                  pushNavigation(context, pushNav: const DownloadView());
+                },
               ),
               height15(),
               ListTile(
