@@ -10,7 +10,7 @@ class EffectWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: myHeight(context) * 0.50,
       child: DefaultTabController(
         length: 4,
@@ -27,7 +27,7 @@ class EffectWidget extends StatelessWidget {
                   isScrollable: true,
                   labelColor: myPinkAccent,
                   indicatorColor: myPinkAccent,
-                  tabs: [
+                  tabs: const [
                     Tab(
                       icon: Icon(CupertinoIcons.search),
                     ),
@@ -45,11 +45,11 @@ class EffectWidget extends StatelessWidget {
               child: TabBarView(
                 children: [
                   // Content of Tab 1
-                  Center(
+                  const Center(
                     child: Text('Content for Tab 1'),
                   ),
                   // Content of Tab 2
-                  Center(
+                  const Center(
                     child: Text('Content for Tab 2'),
                   ),
                   // Content of Tab 3
@@ -89,7 +89,7 @@ class EffectWidget extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Center(
+                  const Center(
                     child: Text('Content for Tab 3'),
                   ),
                 ],

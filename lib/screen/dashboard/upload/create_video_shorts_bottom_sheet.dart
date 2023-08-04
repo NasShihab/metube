@@ -35,7 +35,7 @@ class UploadBottomSheet extends StatelessWidget {
               icon: FontAwesomeIcons.video,
               onTap: () {
                 pushNavigation(context,
-                    pushNav: UploadShort(
+                    pushNav: const UploadShort(
                       selected: 1,
                     ));
               },
@@ -46,7 +46,7 @@ class UploadBottomSheet extends StatelessWidget {
               text: 'Upload a video',
               icon: FontAwesomeIcons.video,
               onTap: () {
-                pushNavigation(context, pushNav: UploadVideoDetails());
+                pushNavigation(context, pushNav: const UploadVideoDetails());
               },
             ),
             height20(),
@@ -55,7 +55,7 @@ class UploadBottomSheet extends StatelessWidget {
               text: 'Go Live',
               icon: FontAwesomeIcons.video,
               onTap: () {
-                pushNavigation(context, pushNav: GoLive());
+                pushNavigation(context, pushNav: const GoLive());
               },
             ),
           ],

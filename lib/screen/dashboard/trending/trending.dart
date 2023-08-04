@@ -15,27 +15,22 @@ class Trending extends ConsumerWidget {
       HorizontalCategoryModel(
           title: 'All',
           function: (BuildContext context) {
-            print('Top');
           }),
       HorizontalCategoryModel(
           title: 'Top',
           function: (BuildContext context) {
-            print('Top');
           }),
       HorizontalCategoryModel(
           title: 'Music',
           function: (BuildContext context) {
-            print('Top');
           }),
       HorizontalCategoryModel(
           title: 'News',
           function: (BuildContext context) {
-            print('Top');
           }),
       HorizontalCategoryModel(
           title: 'Gaming',
           function: (BuildContext context) {
-            print('Top');
           }),
     ];
     return Scaffold(
@@ -81,7 +76,7 @@ class Trending extends ConsumerWidget {
             Expanded(
               child: Padding(
                 padding: EdgeInsets.symmetric(horizontal: 15.w),
-                child: SingleChildScrollView(
+                child: const SingleChildScrollView(
                   child: NewsFeed(),
                 ),
               ),

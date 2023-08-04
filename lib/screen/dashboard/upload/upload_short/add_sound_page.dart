@@ -18,7 +18,7 @@ class AddSoundPage extends StatelessWidget {
           onTap: () {
             Navigator.pop(context);
           },
-          child: Icon(Icons.close),
+          child: const Icon(Icons.close),
         ),
         title: Wrap(
           children: [
@@ -56,7 +56,7 @@ class AddSoundPage extends StatelessWidget {
                     fillColor: Colors.grey.withOpacity(0.6),
                     contentPadding: EdgeInsets.symmetric(vertical: 10.h),
                     suffixIcon: Icon(Icons.filter_alt, color: myPinkAccent),
-                    prefixIcon: Icon(CupertinoIcons.search),
+                    prefixIcon: const Icon(CupertinoIcons.search),
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(15.0),
                     ),
@@ -71,7 +71,7 @@ class AddSoundPage extends StatelessWidget {
                   children: [
                     TabBar(
                       indicatorColor: myPinkAccent,
-                      tabs: [
+                      tabs: const [
                         Tab(text: 'Discover'),
                         Tab(text: 'Favorite'),
                         // Add more tabs if needed
@@ -125,7 +125,7 @@ class AddSoundPage extends StatelessWidget {
                                       color: myPinkAccent,
                                     ),
                                     onDeleted: () {
-                                      pushNavigation(context, pushNav: UploadShort(selected: 2,));
+                                      pushNavigation(context, pushNav: const UploadShort(selected: 2,));
                                     },
                                   ),
                                 ),
@@ -134,7 +134,7 @@ class AddSoundPage extends StatelessWidget {
                           ),
 
                           ///
-                          Center(child: Text('Tab 2 content')),
+                          const Center(child: Text('Tab 2 content')),
                         ],
                       ),
                     ),

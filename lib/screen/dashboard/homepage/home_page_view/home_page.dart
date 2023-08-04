@@ -20,7 +20,7 @@ class HomePage extends StatelessWidget {
                 padding: EdgeInsets.symmetric(vertical: 10.h),
                 child: HorizontalCategoryWidget(list: homeCategoryList),
               ),
-              Expanded(
+              const Expanded(
                 child: SingleChildScrollView(
                   child: NewsFeed(),
                 ),

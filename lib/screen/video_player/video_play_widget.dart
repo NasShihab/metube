@@ -10,7 +10,7 @@ import '../../z_reusable_widget/height_weight.dart';
 import '../../z_reusable_widget/text_material/text_theme.dart';
 
 class VideoPlayWidget extends StatelessWidget {
-  VideoPlayWidget({Key? key}) : super(key: key);
+  const VideoPlayWidget({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -28,59 +28,57 @@ class VideoPlayWidget extends StatelessWidget {
             style: bodySmall(context),
           ),
           children: [
-            Container(
-              child: Row(
-                children: [
-                  Expanded(
-                    child: ListTile(
-                      title: Text(
-                        '20K',
-                        style: bodyLarge(context),
-                      ),
-                      subtitle: Text(
-                        'Likes',
-                        style: bodySmall(context),
-                      ),
+            Row(
+              children: [
+                Expanded(
+                  child: ListTile(
+                    title: Text(
+                      '20K',
+                      style: bodyLarge(context),
+                    ),
+                    subtitle: Text(
+                      'Likes',
+                      style: bodySmall(context),
                     ),
                   ),
-                  Expanded(
-                    child: ListTile(
-                      title: Text(
-                        '879',
-                        style: bodyLarge(context),
-                      ),
-                      subtitle: Text(
-                        'Dislikes',
-                        style: bodySmall(context),
-                      ),
+                ),
+                Expanded(
+                  child: ListTile(
+                    title: Text(
+                      '879',
+                      style: bodyLarge(context),
+                    ),
+                    subtitle: Text(
+                      'Dislikes',
+                      style: bodySmall(context),
                     ),
                   ),
-                  Expanded(
-                    child: ListTile(
-                      title: Text(
-                        '2.5 M',
-                        style: bodyLarge(context),
-                      ),
-                      subtitle: Text(
-                        'Views',
-                        style: bodySmall(context),
-                      ),
+                ),
+                Expanded(
+                  child: ListTile(
+                    title: Text(
+                      '2.5 M',
+                      style: bodyLarge(context),
+                    ),
+                    subtitle: Text(
+                      'Views',
+                      style: bodySmall(context),
                     ),
                   ),
-                  Expanded(
-                    child: ListTile(
-                      title: Text(
-                        'Dec 24',
-                        style: bodyLarge(context),
-                      ),
-                      subtitle: Text(
-                        '2022',
-                        style: bodySmall(context),
-                      ),
+                ),
+                Expanded(
+                  child: ListTile(
+                    title: Text(
+                      'Dec 24',
+                      style: bodyLarge(context),
+                    ),
+                    subtitle: Text(
+                      '2022',
+                      style: bodySmall(context),
                     ),
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 15.w),
@@ -89,16 +87,16 @@ class VideoPlayWidget extends StatelessWidget {
           ],
         ),
         height15(),
-        IconTextWidget(),
+        const IconTextWidget(),
         height30(),
         InkWell(
           onTap: (){
-            Navigator.pushNamed(context, VideoChannel().pageName);
+            Navigator.pushNamed(context, const VideoChannel().pageName);
           },
           child: ListTile(
             leading: CircleAvatar(
               radius: 30.r,
-              backgroundImage: AssetImage('assets/images/portrait1.jpg'),
+              backgroundImage: const AssetImage('assets/images/portrait1.jpg'),
             ),
             title: Padding(
               padding: EdgeInsets.symmetric(vertical: 5.w),

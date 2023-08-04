@@ -41,7 +41,7 @@ Widget allNotification() => ListView.builder(
       itemBuilder: (context, index) => Padding(
         padding: EdgeInsets.symmetric(vertical: 10.h),
         child: ListTile(
-          leading: CircleAvatar(
+          leading: const CircleAvatar(
             backgroundImage: AssetImage('assets/images/portrait.jpg'),
           ),
           title: Text(
@@ -61,13 +61,13 @@ Widget allNotification() => ListView.builder(
               ClipRRect(
                 borderRadius: BorderRadius.circular(10.r),
                 child: Image(
-                  image: AssetImage('assets/images/image1.jpg'),
+                  image: const AssetImage('assets/images/image1.jpg'),
                   height: 200.h,
                   width: 100.w,
                   fit: BoxFit.cover,
                 ),
               ),
-              Icon(Icons.more_vert_rounded)
+              const Icon(Icons.more_vert_rounded)
             ],
           ),
         ),

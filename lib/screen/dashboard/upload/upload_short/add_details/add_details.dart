@@ -24,7 +24,7 @@ class AddDetailsPage extends StatelessWidget {
             padding: EdgeInsets.symmetric(horizontal: 15.w),
             child: InkWell(
               onTap: () {},
-              child: Icon(Icons.more_horiz),
+              child: const Icon(Icons.more_horiz),
             ),
           ),
         ],
@@ -60,44 +60,44 @@ class AddDetailsPage extends StatelessWidget {
                   ),
                 ],
               ),
-              add_details_widget(
+              addDetailsWidget(
                 context,
                 icon: CupertinoIcons.eye,
                 text: 'Visibility',
                 trailingText: 'Public',
                 onTap: () {
                   pushNavigation(context,
-                      pushNav: AddDetailsOptions(selectedValue: 1));
+                      pushNav: const AddDetailsOptions(selectedValue: 1));
                 },
               ),
-              add_details_widget(
+              addDetailsWidget(
                 context,
                 icon: Icons.group,
                 text: 'Select Audience',
                 trailingText: '',
                 onTap: () {
                   pushNavigation(context,
-                      pushNav: AddDetailsOptions(selectedValue: 2));
+                      pushNav: const AddDetailsOptions(selectedValue: 2));
                 },
               ),
-              add_details_widget(
+              addDetailsWidget(
                 context,
                 icon: CupertinoIcons.calendar,
                 text: 'Schedule',
                 trailingText: 'Publish Now',
                 onTap: () {
                   pushNavigation(context,
-                      pushNav: AddDetailsOptions(selectedValue: 3));
+                      pushNav: const AddDetailsOptions(selectedValue: 3));
                 },
               ),
-              add_details_widget(
+              addDetailsWidget(
                 context,
                 icon: Icons.insert_comment_outlined,
                 text: 'Comments',
                 trailingText: 'Allow all comments',
                 onTap: () {
                   pushNavigation(context,
-                      pushNav: AddDetailsOptions(selectedValue: 4));
+                      pushNav: const AddDetailsOptions(selectedValue: 4));
                 },
               ),
             ],
@@ -114,7 +114,7 @@ class AddDetailsPage extends StatelessWidget {
   }
 }
 
-Widget add_details_widget(
+Widget addDetailsWidget(
   BuildContext context, {
   required var icon,
   required String text,

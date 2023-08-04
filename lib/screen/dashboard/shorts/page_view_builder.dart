@@ -11,7 +11,7 @@ class ShortsPageView extends StatelessWidget {
       body: PageView(
         controller: controller,
         scrollDirection: Axis.vertical,
-        children: [
+        children: const [
           Shorts(
               videoURL:
                   'https://assets.mixkit.co/videos/preview/mixkit-woman-petting-a-cat-1542-large.mp4',

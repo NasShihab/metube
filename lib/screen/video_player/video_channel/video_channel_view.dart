@@ -4,7 +4,7 @@ import 'package:metube/z_reusable_widget/height_weight.dart';
 import 'video_channel_widget.dart';
 
 class VideoChannel extends StatelessWidget {
-  VideoChannel({Key? key}) : super(key: key);
+  const VideoChannel({Key? key}) : super(key: key);
 
   final String pageName = '/VideoChannel';
 
@@ -40,8 +40,8 @@ class VideoChannel extends StatelessWidget {
         body: TabBarView(
           children: [
             home(context),
-            VideoTab(),
-            PlayListTab(),
+            const VideoTab(),
+            const PlayListTab(),
             AboutTab(),
           ],
         ),

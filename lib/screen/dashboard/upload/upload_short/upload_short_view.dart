@@ -28,11 +28,11 @@ class UploadShort extends StatelessWidget {
             width: double.infinity,
           ),
           Positioned(
-            child: Icon(
-              Icons.close,
-            ),
             top: myHeight(context) * .05,
             left: myWidth(context) * .05,
+            child: const Icon(
+              Icons.close,
+            ),
           ),
           Positioned(
             top: myHeight(context) * .05,
@@ -40,7 +40,7 @@ class UploadShort extends StatelessWidget {
             right: myWidth(context) * .05,
             child: InkWell(
               onTap: () {
-                pushNavigation(context, pushNav: AddSoundPage());
+                pushNavigation(context, pushNav: const AddSoundPage());
               },
               child: Chip(
                 label: Text(
@@ -138,7 +138,7 @@ class UploadShort extends StatelessWidget {
                     ],
                   ),
                 )
-              : SizedBox.shrink(),
+              : const SizedBox.shrink(),
         ],
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
@@ -157,7 +157,7 @@ class UploadShort extends StatelessWidget {
                           ),
                           context: context,
                           builder: (context) {
-                            return EffectWidget();
+                            return const EffectWidget();
                           });
                     },
                     child: Column(
@@ -183,7 +183,7 @@ class UploadShort extends StatelessWidget {
                   child: CircleAvatar(
                     backgroundColor: myPinkAccent,
                     radius: 35.r,
-                    child: Icon(
+                    child: const Icon(
                       FontAwesomeIcons.video,
                       color: Colors.white,
                     ),
@@ -214,13 +214,13 @@ class UploadShort extends StatelessWidget {
                       height: 50.h,
                       child: ElevatedButton(
                         onPressed: () {},
-                        child: Text('Draft'),
                         style: ButtonStyle(
                           backgroundColor:
                               MaterialStateProperty.all<Color>(Colors.white),
                           foregroundColor:
                               MaterialStateProperty.all<Color>(myPinkAccent),
                         ),
+                        child: const Text('Draft'),
                       ),
                     ),
                   ),
@@ -230,10 +230,10 @@ class UploadShort extends StatelessWidget {
                       height: 50.h,
                       child: ElevatedButton(
                         onPressed: () {
-                          pushNavigation(context, pushNav: AddDetailsPage());
+                          pushNavigation(context, pushNav: const AddDetailsPage());
                         },
-                        child: Text('Next'),
-                        style: ButtonStyle(),
+                        style: const ButtonStyle(),
+                        child: const Text('Next'),
                       ),
                     ),
                   ),

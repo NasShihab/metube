@@ -8,10 +8,10 @@ class VideoApp extends StatefulWidget {
   const VideoApp({super.key});
 
   @override
-  _VideoAppState createState() => _VideoAppState();
+  VideoAppState createState() => VideoAppState();
 }
 
-class _VideoAppState extends State<VideoApp> {
+class VideoAppState extends State<VideoApp> {
   late VideoPlayerController _controller;
 
   @override
@@ -40,7 +40,7 @@ class _VideoAppState extends State<VideoApp> {
                     )
                   : Container(
                       color: Colors.black,
-                      child: Center(
+                      child: const Center(
                         child: CircularProgressIndicator(
                           color: Colors.white,
                         ),
@@ -52,7 +52,7 @@ class _VideoAppState extends State<VideoApp> {
                 padding: EdgeInsets.symmetric(horizontal: 15.w),
                 child: ListView(
                   shrinkWrap: true,
-                  children: [
+                  children: const [
                     VideoPlayWidget(),
                     NewsFeed(),
                   ],

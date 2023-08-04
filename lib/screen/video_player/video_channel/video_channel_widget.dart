@@ -57,7 +57,7 @@ Widget home(BuildContext context) => Padding(
           height20(),
           CircleAvatar(
             radius: 80.r,
-            backgroundImage: AssetImage('assets/images/portrait2.jpg'),
+            backgroundImage: const AssetImage('assets/images/portrait2.jpg'),
           ),
           height15(),
           Row(
@@ -68,7 +68,7 @@ Widget home(BuildContext context) => Padding(
                 style:
                     titleLarge(context)?.copyWith(fontWeight: FontWeight.bold),
               ),
-              Icon(
+              const Icon(
                 Icons.verified_rounded,
                 color: Colors.blue,
               )
@@ -82,7 +82,7 @@ Widget home(BuildContext context) => Padding(
             backgroundColor: myPinkAccent,
           ),
           height20(),
-          NewsFeed()
+          const NewsFeed()
         ],
       ),
     );
@@ -102,7 +102,7 @@ class VideoTab extends StatelessWidget {
           padding: EdgeInsets.symmetric(horizontal: 15.w),
           child: GridView.count(
             shrinkWrap: true,
-            physics: ScrollPhysics(),
+            physics: const ScrollPhysics(),
             crossAxisCount: 2,
             mainAxisSpacing: 15.h,
             childAspectRatio: 3 / 5,
@@ -222,7 +222,7 @@ class PlayListTab extends StatelessWidget {
                         child: Stack(
                           children: [
                             Image(
-                              image: AssetImage('assets/images/image1.jpg'),
+                              image: const AssetImage('assets/images/image1.jpg'),
                               height: 100.h,
                               width: double.infinity,
                               fit: BoxFit.fill,
@@ -277,7 +277,7 @@ class PlayListTab extends StatelessWidget {
                           onTap: () {
                             Fluttertoast.showToast(msg: 'More');
                           },
-                          child: Icon(Icons.more_vert_rounded),
+                          child: const Icon(Icons.more_vert_rounded),
                         ),
                       ),
                     )
@@ -355,21 +355,21 @@ class AboutTab extends StatelessWidget {
     );
   }
 
-  final List<about_widget_model> linkList = [
-    about_widget_model(icon: FontAwesomeIcons.instagram, text: 'Instagram'),
-    about_widget_model(icon: FontAwesomeIcons.squareFacebook, text: 'Facebook'),
-    about_widget_model(icon: FontAwesomeIcons.squareTwitter, text: 'Twitter'),
-    about_widget_model(icon: FontAwesomeIcons.internetExplorer, text: 'Website'),
+  final List<AboutWidgetModel> linkList = [
+    AboutWidgetModel(icon: FontAwesomeIcons.instagram, text: 'Instagram'),
+    AboutWidgetModel(icon: FontAwesomeIcons.squareFacebook, text: 'Facebook'),
+    AboutWidgetModel(icon: FontAwesomeIcons.squareTwitter, text: 'Twitter'),
+    AboutWidgetModel(icon: FontAwesomeIcons.internetExplorer, text: 'Website'),
   ];
-  final List<about_widget_model> infoList = [
-    about_widget_model(icon: FontAwesomeIcons.mapPin, text: 'United States'),
-    about_widget_model(icon: FontAwesomeIcons.calendar, text: 'Joined 2020'),
-    about_widget_model(icon: FontAwesomeIcons.expand, text: '8,88,800 views'),
+  final List<AboutWidgetModel> infoList = [
+    AboutWidgetModel(icon: FontAwesomeIcons.mapPin, text: 'United States'),
+    AboutWidgetModel(icon: FontAwesomeIcons.calendar, text: 'Joined 2020'),
+    AboutWidgetModel(icon: FontAwesomeIcons.expand, text: '8,88,800 views'),
   ];
 }
 
-class about_widget_model {
-  about_widget_model({
+class AboutWidgetModel {
+  AboutWidgetModel({
     required this.icon,
     required this.text,
     this.textColor,

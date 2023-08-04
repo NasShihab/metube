@@ -9,8 +9,8 @@ final onBoardingNotifier = StateNotifierProvider<OnBoardProvider, int>(
   (ref) => OnBoardProvider(),
 );
 
-class Onboard_Page extends ConsumerWidget {
-  Onboard_Page({Key? key}) : super(key: key);
+class OnboardPage extends ConsumerWidget {
+  const OnboardPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

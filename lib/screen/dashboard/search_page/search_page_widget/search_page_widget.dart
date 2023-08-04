@@ -21,7 +21,7 @@ Widget searchBox(BuildContext context) {
               child: IconButton(
                   onPressed: () {
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => Dashboard()));
+                        MaterialPageRoute(builder: (context) => const Dashboard()));
                   },
                   icon: Icon(
                     Icons.arrow_back,
@@ -61,7 +61,7 @@ Widget searchBox(BuildContext context) {
                       ),
                     ),
                     border: OutlineInputBorder(
-                        borderSide: BorderSide(),
+                        borderSide: const BorderSide(),
                         borderRadius: BorderRadius.circular(15.r)),
                     contentPadding: EdgeInsets.symmetric(vertical: 10.h),
                     filled: true,
@@ -101,7 +101,7 @@ Widget searchBox(BuildContext context) {
                             child: Stack(
                               children: [
                                 Image(
-                                  image: AssetImage('assets/images/image1.jpg'),
+                                  image: const AssetImage('assets/images/image1.jpg'),
                                   height: 280.h,
                                   width: double.infinity,
                                   fit: BoxFit.fill,
@@ -152,7 +152,7 @@ Widget searchBox(BuildContext context) {
                               onTap: () {
                                 Fluttertoast.showToast(msg: 'More');
                               },
-                              child: Icon(Icons.more_vert_rounded),
+                              child: const Icon(Icons.more_vert_rounded),
                             ),
                           )
                         ],
@@ -171,7 +171,7 @@ Widget searchBox(BuildContext context) {
                         'Channel',
                         style: bodyLarge(context),
                       ),
-                      leading: CircleAvatar(
+                      leading: const CircleAvatar(
                         backgroundImage:
                             AssetImage('assets/images/portrait.jpg'),
                       ),
@@ -193,7 +193,7 @@ Widget searchBox(BuildContext context) {
                     );
                   },
                 )
-              : ListTile(
+              : const ListTile(
                   title: Text('No Data'),
                 )
     ],

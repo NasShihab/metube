@@ -34,12 +34,12 @@ AppBar homePageAppBar(BuildContext context) => AppBar(
                   context,
                   MaterialPageRoute(
                     builder: (context) {
-                      return SearchPage();
+                      return const SearchPage();
                     },
                   ),
                 );
               },
-              child: Icon(CupertinoIcons.search),
+              child: const Icon(CupertinoIcons.search),
             ),
             width10(),
             InkWell(
@@ -73,7 +73,7 @@ AppBar homePageAppBar(BuildContext context) => AppBar(
     );
 
 class HorizontalCategoryWidget extends StatefulWidget {
-  HorizontalCategoryWidget({
+  const HorizontalCategoryWidget({
     super.key,
     required this.list,
   });

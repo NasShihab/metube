@@ -28,7 +28,7 @@ class GoLive extends StatelessWidget {
             right: myWidth(context) * .05,
             child: InkWell(
               onTap: () {
-                pushNavigation(context, pushNav: AddSoundPage());
+                pushNavigation(context, pushNav: const AddSoundPage());
               },
               child: Chip(
                 label: Text(
@@ -44,16 +44,16 @@ class GoLive extends StatelessWidget {
             ),
           ),
           Positioned(
+            top: myHeight(context) * .05,
+            left: myWidth(context) * .05,
             child: InkWell(
               onTap: () {
                 Navigator.pop(context);
               },
-              child: Icon(
+              child: const Icon(
                 Icons.close,
               ),
             ),
-            top: myHeight(context) * .05,
-            left: myWidth(context) * .05,
           ),
           Positioned(
             right: myWidth(context) * .05,

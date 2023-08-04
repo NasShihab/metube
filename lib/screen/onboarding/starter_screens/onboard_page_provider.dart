@@ -26,7 +26,7 @@ List<OnboardItems> onBoardingInfo = [
   ),
   OnboardItems(
     'assets/images/fourth_screen.png',
-    'Let\s explore video the world with MeTube now',
+    'Lets explore video the world with MeTube now',
     'Get Started'
   ),
 ];

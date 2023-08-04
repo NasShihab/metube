@@ -23,12 +23,12 @@ class AddDetailsOptions extends StatelessWidget {
         ),
       ),
       body: selectedValue == 1
-          ? SetVisibility()
+          ? const SetVisibility()
           : selectedValue == 2
-              ? SelectAudience()
+              ? const SelectAudience()
               : selectedValue == 3
-                  ? Schedule()
-                  : Comments(),
+                  ? const Schedule()
+                  : const Comments(),
     );
   }
 }
@@ -49,7 +49,7 @@ class SetVisibility extends StatelessWidget {
               onChanged: (value) {},
             ),
           ),
-          title: Text('Public'),
+          title: const Text('Public'),
         ),
         ListTile(
           leading: Transform.scale(
@@ -60,7 +60,7 @@ class SetVisibility extends StatelessWidget {
               onChanged: (value) {},
             ),
           ),
-          title: Text('Unlisted'),
+          title: const Text('Unlisted'),
         ),
         ListTile(
           leading: Transform.scale(
@@ -71,7 +71,7 @@ class SetVisibility extends StatelessWidget {
               onChanged: (value) {},
             ),
           ),
-          title: Text('Private'),
+          title: const Text('Private'),
         ),
         Expanded(
           child: Align(
@@ -264,7 +264,7 @@ class Comments extends StatelessWidget {
               onChanged: (value) {},
             ),
           ),
-          title: Text('Allow all comments'),
+          title: const Text('Allow all comments'),
         ),
         ListTile(
           leading: Transform.scale(
@@ -275,7 +275,7 @@ class Comments extends StatelessWidget {
               onChanged: (value) {},
             ),
           ),
-          title: Text('Hold potentially inappropriate comments for review'),
+          title: const Text('Hold potentially inappropriate comments for review'),
         ),
         ListTile(
           leading: Transform.scale(
@@ -286,7 +286,7 @@ class Comments extends StatelessWidget {
               onChanged: (value) {},
             ),
           ),
-          title: Text('Hold all comments for review'),
+          title: const Text('Hold all comments for review'),
         ),
         ListTile(
           leading: Transform.scale(
@@ -297,7 +297,7 @@ class Comments extends StatelessWidget {
               onChanged: (value) {},
             ),
           ),
-          title: Text('Disable comments'),
+          title: const Text('Disable comments'),
         ),
         Expanded(
           child: Align(

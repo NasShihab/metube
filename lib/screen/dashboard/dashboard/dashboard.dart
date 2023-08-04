@@ -22,7 +22,7 @@ class Dashboard extends ConsumerWidget {
       //1
       HomePage(),
       //2
-      ShortsPageView(),
+      const ShortsPageView(),
       //3 Upload
       Scaffold(
         body: Center(
@@ -37,7 +37,7 @@ class Dashboard extends ConsumerWidget {
                 ),
                 context: context,
                 builder: (context) {
-                  return UploadBottomSheet();
+                  return const UploadBottomSheet();
                 },
               );
             },
@@ -76,15 +76,15 @@ class Dashboard extends ConsumerWidget {
             ref.read(dashboardItemProvider.notifier).selected(index);
           },
           destinations: [
-            NavigationDestination(
-              icon: const Icon(Icons.home_outlined),
+            const NavigationDestination(
+              icon: Icon(Icons.home_outlined),
               label: 'Home',
               selectedIcon: Icon(
                 Icons.home,
               ),
             ),
-            NavigationDestination(
-              icon: const Icon(Icons.video_camera_back_outlined),
+            const NavigationDestination(
+              icon: Icon(Icons.video_camera_back_outlined),
               label: 'Shorts',
               selectedIcon: Icon(
                 Icons.video_camera_back,
@@ -101,28 +101,28 @@ class Dashboard extends ConsumerWidget {
                       ),
                       context: context,
                       builder: (context) {
-                        return UploadBottomSheet();
+                        return const UploadBottomSheet();
                       });
                 },
                 child: CircleAvatar(
                   backgroundColor: myPinkAccent,
-                  child: Icon(Icons.add),
+                  child: const Icon(Icons.add),
                 ),
               ),
               label: 'Upload',
-              selectedIcon: Icon(
+              selectedIcon: const Icon(
                 Icons.add_circle,
               ),
             ),
-            NavigationDestination(
-              icon: const Icon(Icons.subscriptions_outlined),
+            const NavigationDestination(
+              icon: Icon(Icons.subscriptions_outlined),
               label: 'Subscription',
               selectedIcon: Icon(
                 Icons.subscriptions,
               ),
             ),
-            NavigationDestination(
-              icon: const Icon(Icons.library_books_outlined),
+            const NavigationDestination(
+              icon: Icon(Icons.library_books_outlined),
               label: 'Library',
               selectedIcon: Icon(
                 Icons.library_books,

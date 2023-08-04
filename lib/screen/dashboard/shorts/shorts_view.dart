@@ -14,7 +14,7 @@ import '../../../z_reusable_widget/text_material/text_theme.dart';
 import '../../video_player/widget/icon_text_widget.dart';
 
 class Shorts extends StatefulWidget {
-  Shorts({
+  const Shorts({
     super.key,
     required this.videoURL,
     required this.videDescription,
@@ -57,7 +57,7 @@ class _ShortsState extends State<Shorts> {
               });
             },
             child: Container(
-              decoration: BoxDecoration(color: Colors.black),
+              decoration: const BoxDecoration(color: Colors.black),
               height: double.infinity,
               child: _controller.value.isInitialized
                   ? AspectRatio(
@@ -66,7 +66,7 @@ class _ShortsState extends State<Shorts> {
                     )
                   : Container(
                       color: Colors.black,
-                      child: Center(
+                      child: const Center(
                         child: CircularProgressIndicator(
                           color: Colors.white,
                         ),
@@ -126,7 +126,7 @@ class _ShortsState extends State<Shorts> {
                   height10(),
                   InkWell(
                     onTap: () {
-                      pushNavigation(context, pushNav: VideoChannel());
+                      pushNavigation(context, pushNav: const VideoChannel());
                     },
                     child: Wrap(
                       spacing: 15.w,
@@ -135,7 +135,7 @@ class _ShortsState extends State<Shorts> {
                         CircleAvatar(
                           radius: 26.r,
                           backgroundImage:
-                              AssetImage('assets/images/portrait1.jpg'),
+                              const AssetImage('assets/images/portrait1.jpg'),
                         ),
                         Text(
                           'Jenny Wilson',
@@ -182,7 +182,7 @@ class _ShortsState extends State<Shorts> {
                 ),
                 context: context,
                 builder: (context) {
-                  return ShortsComments();
+                  return const ShortsComments();
                 });
           }),
       IconText(text: '2.2K', icon: FontAwesomeIcons.share, onTap: () {}),

@@ -23,7 +23,7 @@ class UploadVideoDetails extends StatelessWidget {
         actions: [
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 10.w),
-            child: InkWell(
+            child: const InkWell(
               child: Icon(Icons.more_horiz),
             ),
           ),
@@ -68,7 +68,7 @@ class UploadVideoDetails extends StatelessWidget {
                 child: ListView(
                   shrinkWrap: true,
                   children: [
-                    Text('Add a title here'),
+                    const Text('Add a title here'),
                     height15(),
                     TextFormField(
                       decoration: InputDecoration(
@@ -79,42 +79,42 @@ class UploadVideoDetails extends StatelessWidget {
                           hintText: 'Add your title'),
                       style: bodySmall(context),
                     ),
-                    add_details_widget(
+                    addDetailsWidget(
                       context,
                       icon: CupertinoIcons.pencil_ellipsis_rectangle,
                       text: 'Add Description',
                       trailingText: '',
                       onTap: () {},
                     ),
-                    add_details_widget(
+                    addDetailsWidget(
                       context,
                       icon: CupertinoIcons.eye,
                       text: 'Visibility',
                       trailingText: 'Public',
                       onTap: () {},
                     ),
-                    add_details_widget(
+                    addDetailsWidget(
                       context,
                       icon: Icons.group_add_outlined,
                       text: 'Select Audience',
                       trailingText: '',
                       onTap: () {},
                     ),
-                    add_details_widget(
+                    addDetailsWidget(
                       context,
                       icon: CupertinoIcons.calendar,
                       text: 'Schedule',
                       trailingText: 'Now',
                       onTap: () {},
                     ),
-                    add_details_widget(
+                    addDetailsWidget(
                       context,
                       icon: CupertinoIcons.chat_bubble_text,
                       text: 'Comments',
                       trailingText: 'Allow all comments',
                       onTap: () {},
                     ),
-                    add_details_widget(
+                    addDetailsWidget(
                       context,
                       icon: CupertinoIcons.map_pin_ellipse,
                       text: 'Location',

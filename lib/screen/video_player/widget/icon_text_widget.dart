@@ -6,7 +6,7 @@ import '../../../../z_reusable_widget/height_weight.dart';
 import '../../../../z_reusable_widget/text_material/text_theme.dart';
 
 class IconTextWidget extends StatelessWidget {
-  IconTextWidget({super.key});
+  const IconTextWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +15,7 @@ class IconTextWidget extends StatelessWidget {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: IconTextWidget()
+        children: const IconTextWidget()
             .list(context)
             .map((data) => iconText(context,
                 icon: data.icon, text: data.text, onTap: data.onTap))

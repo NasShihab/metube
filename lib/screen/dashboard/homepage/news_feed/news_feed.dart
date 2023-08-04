@@ -23,7 +23,7 @@ class NewsFeed extends StatelessWidget {
             InkWell(
               onTap: () {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => VideoApp()));
+                    MaterialPageRoute(builder: (context) => const VideoApp()));
               },
               child: Stack(
                 children: [
@@ -51,7 +51,7 @@ class NewsFeed extends StatelessWidget {
             height10(),
             InkWell(
               onTap: (){
-                Navigator.pushNamed(context, VideoChannel().pageName);
+                Navigator.pushNamed(context, const VideoChannel().pageName);
               },
               child: ListTile(
                 leading: CircleAvatar(
@@ -98,7 +98,7 @@ class NewsFeed extends StatelessWidget {
               ],
             ),
             height10(),
-            ShortsFeed(),
+            const ShortsFeed(),
             height20(),
           ],
         ),

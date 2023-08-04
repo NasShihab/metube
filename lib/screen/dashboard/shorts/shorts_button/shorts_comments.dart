@@ -29,7 +29,7 @@ class ShortsComments extends StatelessWidget {
                       TextStyle(fontSize: 25.sp, fontWeight: FontWeight.bold),
                   textAlign: TextAlign.start,
                 ),
-                Icon(CupertinoIcons.xmark)
+                const Icon(CupertinoIcons.xmark)
               ],
             ),
             height20(),
@@ -41,7 +41,7 @@ class ShortsComments extends StatelessWidget {
               children: [
                 CircleAvatar(
                   radius: 16.r,
-                  backgroundImage: AssetImage('assets/images/portrait1.jpg'),
+                  backgroundImage: const AssetImage('assets/images/portrait1.jpg'),
                 ),
                 width10(),
                 Expanded(
@@ -67,7 +67,7 @@ class ShortsComments extends StatelessWidget {
               thickness: 2,
             ),
             ListView(
-              physics: ScrollPhysics(),
+              physics: const ScrollPhysics(),
               shrinkWrap: true,
               children: List.generate(commentData(context).length, (index) {
                 final data = commentData(context)[index];
@@ -95,7 +95,7 @@ class ShortsComments extends StatelessWidget {
                           ),
                         ],
                       ),
-                      trailing: Icon(Icons.more_vert_rounded),
+                      trailing: const Icon(Icons.more_vert_rounded),
                     ),
                     Text(
                       data.comments,
@@ -108,15 +108,15 @@ class ShortsComments extends StatelessWidget {
                       children: [
                         Row(
                           children: [
-                            Icon(CupertinoIcons.hand_thumbsup),
+                            const Icon(CupertinoIcons.hand_thumbsup),
                             width5(),
                             Text(data.likesCount),
                             width30(),
-                            Icon(CupertinoIcons.hand_thumbsdown),
+                            const Icon(CupertinoIcons.hand_thumbsdown),
                             width5(),
                             Text(data.dislikeCount),
                             width30(),
-                            Icon(CupertinoIcons.chat_bubble_text),
+                            const Icon(CupertinoIcons.chat_bubble_text),
                             width5(),
                             Text(data.commentsCount),
                             width30(),
@@ -141,17 +141,14 @@ List<HorizontalCategoryModel> commentCategory(BuildContext context) {
     HorizontalCategoryModel(
         title: 'Top',
         function: (BuildContext context) {
-          print('Top');
         }),
     HorizontalCategoryModel(
         title: 'Newest',
         function: (BuildContext context) {
-          print('Newest');
         }),
     HorizontalCategoryModel(
         title: 'Most Liked',
         function: (BuildContext context) {
-          print('Most Liked');
         }),
   ];
 }

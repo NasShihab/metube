@@ -19,9 +19,9 @@ import '../screen/video_player/video_channel/video_channel_view.dart';
 import '../screen/video_player/video_play_view.dart';
 
 var myRoutes = <String, WidgetBuilder>{
-  '/': (context) => SplashScreen(),
+  '/': (context) => const SplashScreen(),
   '/splash_screen': (context) => const SplashScreen(),
-  '/onboard_page': (context) => Onboard_Page(),
+  '/onboard_page': (context) => const OnboardPage(),
   '/dashboard': (context) => const Dashboard(),
   '/welcome': (context) => const Welcome(),
   '/login': (context) => const Login(),
@@ -31,11 +31,11 @@ var myRoutes = <String, WidgetBuilder>{
   '/fingerprint': (context) => const Fingerprint(),
   '/home_page': (context) => HomePage(),
   '/forget_password': (context) => const ForgetPassword(),
-  '/enter_otp_code': (context) => EnterOtpCode(),
+  '/enter_otp_code': (context) => const EnterOtpCode(),
   '/create_new_password': (context) => const CreateNewPassword(),
   '/notification_page': (context) => const NotificationPage(),
   '/trending': (context) => const Trending(),
   '/listening_page': (context) => const ListeningPage(),
   '/VideoApp': (context) => const VideoApp(),
-  VideoChannel().pageName: (context) => VideoChannel(),
+  const VideoChannel().pageName: (context) => const VideoChannel(),
 };
