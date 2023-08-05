@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:metube/screen/dashboard/profile/payment/add_new_card/add_new_card_view.dart';
+import 'package:metube/screen/dashboard/profile/payment/review_summary/review_payment_summary.dart';
 import 'package:metube/z_reusable_widget/buttons_custom.dart';
 import 'package:metube/z_reusable_widget/colors_custom.dart';
 import 'package:metube/z_reusable_widget/push_navigation.dart';
@@ -86,7 +87,7 @@ class PaymentsPage extends StatelessWidget {
       floatingActionButton: customButton(
         title: 'Next',
         onPressed: () {
-          Navigator.pushNamed(context, '/Review_Summary');
+         pushNavigation(context, pushNav: const ReviewPaymentSummary());
         },
       ),
     );

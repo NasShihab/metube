@@ -20,7 +20,7 @@ class PaymentUpdateCard extends StatelessWidget {
       floatingActionButton: customButton(
         title: 'Next',
         onPressed: () {
-         pushNavigation(context, pushNav: const ReviewPaymentSummary());
+          pushNavigation(context, pushNav: const ReviewPaymentSummary());
         },
       ),
       appBar: AppBar(
@@ -56,11 +56,10 @@ class PaymentUpdateCard extends StatelessWidget {
                       leading: Image.asset(
                           height: 40,
                           width: 40,
-                          '${updatePaymentMethodList[index].uppaymentLogo}'),
+                          '${updatePaymentMethodList[index].logo}'),
                       title: Text(
-                        '${updatePaymentMethodList[index].uppaymentName}',
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 20.sp),
+                        '${updatePaymentMethodList[index].title}',
+                        style: bodyLarge(context),
                       ),
                       trailing: Radio(
                         value: 4,
@@ -103,16 +102,16 @@ List updatePaymentMethodList = [
   ),
   UpdatePaymentMethodClass(
     'assets/images/master_card.png',
-    '----------------- 4789',
+    '···· ···· ···· 4789',
   ),
 ];
 
 class UpdatePaymentMethodClass {
-  final String uppaymentLogo;
-  final String uppaymentName;
+  final String logo;
+  final String title;
 
   UpdatePaymentMethodClass(
-    this.uppaymentLogo,
-    this.uppaymentName,
+    this.logo,
+    this.title,
   );
 }
