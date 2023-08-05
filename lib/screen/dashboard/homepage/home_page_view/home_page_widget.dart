@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:metube/screen/dashboard/profile/profile_view.dart';
+import 'package:metube/screen/dashboard/profile/profile_view/profile_view.dart';
 import 'package:metube/z_reusable_widget/push_navigation.dart';
 import 'package:metube/z_reusable_widget/text_material/text_theme.dart';
 import '../../../../z_reusable_widget/colors_custom.dart';
@@ -110,8 +110,9 @@ class _HorizontalCategoryWidgetState extends State<HorizontalCategoryWidget> {
                     : bodySmall(context)
                         ?.copyWith(color: myPinkAccent, fontSize: 14.sp),
               ),
-              backgroundColor:
-                  selectedIndex == index ? myPinkAccent : Colors.white,
+              backgroundColor: selectedIndex == index
+                  ? myPinkAccent
+                  : primeColorDark(context),
               shape: StadiumBorder(
                 side: BorderSide(color: myPinkAccent, width: 2),
               ),

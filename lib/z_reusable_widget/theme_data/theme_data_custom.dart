@@ -5,6 +5,7 @@ import '../colors_custom.dart';
 ThemeData lightThemeData() => ThemeData(
       brightness: Brightness.light,
       primaryColor: Colors.black,
+      primaryColorDark: Colors.white.withOpacity(.3),
       // fontFamily: 'Cantarell',
       textTheme: TextTheme(
         //display
@@ -46,7 +47,7 @@ ThemeData lightThemeData() => ThemeData(
         backgroundColor: Colors.transparent,
         titleTextStyle: TextStyle(
           color: myPinkAccent,
-          fontSize: 20.sp,
+          fontSize: 24.sp,
           fontWeight: FontWeight.bold,
         ),
         iconTheme: IconThemeData(
@@ -63,6 +64,7 @@ ThemeData lightThemeData() => ThemeData(
 ThemeData darkThemeData() => ThemeData(
       brightness: Brightness.dark,
       primaryColor: Colors.white,
+      primaryColorDark: Colors.black.withOpacity(.3),
       // fontFamily: 'Cantarell',
       textTheme: TextTheme(
         displayLarge: TextStyle(
@@ -102,7 +104,7 @@ ThemeData darkThemeData() => ThemeData(
         backgroundColor: Colors.transparent,
         titleTextStyle: TextStyle(
           color: myPinkAccent,
-          fontSize: 20.sp,
+          fontSize: 24.sp,
           fontWeight: FontWeight.bold,
         ),
         iconTheme: IconThemeData(

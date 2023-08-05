@@ -6,7 +6,7 @@ import 'package:metube/screen/dashboard/library/history/history_view.dart';
 import 'package:metube/screen/dashboard/library/new_playList/new_playlist.dart';
 import 'package:metube/screen/dashboard/library/watch_later/watch_later_view.dart';
 import 'package:metube/screen/dashboard/library/your_videos/your_videos_view.dart';
-import 'package:metube/screen/dashboard/profile/profile_view.dart';
+import 'package:metube/screen/dashboard/profile/profile_view/profile_view.dart';
 import 'package:metube/z_reusable_widget/colors_custom.dart';
 import 'package:metube/z_reusable_widget/height_weight.dart';
 import 'package:metube/z_reusable_widget/push_navigation.dart';

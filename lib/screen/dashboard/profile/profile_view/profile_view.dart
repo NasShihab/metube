@@ -3,11 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:metube/screen/dashboard/profile/premium_subscription/premium_subscription_view.dart';
-import 'package:metube/screen/dashboard/profile/profile_setting_list.dart';
+import 'package:metube/screen/dashboard/profile/profile_view/profile_setting_list.dart';
 import 'package:metube/z_reusable_widget/push_navigation.dart';
-import '../../../z_reusable_widget/colors_custom.dart';
-import '../../../z_reusable_widget/height_weight.dart';
-import '../../../z_reusable_widget/text_material/text_theme.dart';
+import '../../../../z_reusable_widget/colors_custom.dart';
+import '../../../../z_reusable_widget/height_weight.dart';
+import '../../../../z_reusable_widget/text_material/text_theme.dart';
 
 class ProfileView extends StatelessWidget {
   const ProfileView({super.key});

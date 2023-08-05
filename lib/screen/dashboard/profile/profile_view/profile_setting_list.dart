@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:metube/screen/dashboard/profile/help_center/help_center_page.dart';
 import 'package:metube/screen/dashboard/profile/settings/settings_profile.dart';
 import 'package:metube/z_reusable_widget/push_navigation.dart';
 
-import '../../../model/settings_panel_item_model.dart';
+import '../../../../model/settings_panel_item_model.dart';
 
 List<SettingsItem> profileSettingsList(BuildContext context) {
   return [
@@ -46,7 +47,9 @@ List<SettingsItem> profileSettingsList(BuildContext context) {
     SettingsItem(
       title: 'Help Center',
       icon: Icons.help,
-      onTap: () {},
+      onTap: () {
+        pushNavigation(context, pushNav: const HelpCenterPage());
+      },
     ),
   ];
 }

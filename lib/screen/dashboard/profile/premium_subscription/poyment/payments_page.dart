@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:metube/screen/dashboard/profile/payment/add_new_card/add_new_card_view.dart';
-import 'package:metube/screen/dashboard/profile/payment/review_summary/review_payment_summary.dart';
+import 'package:metube/screen/dashboard/profile/premium_subscription/poyment/add_new_card/add_new_card/add_new_card_view.dart';
+import 'package:metube/screen/dashboard/profile/premium_subscription/poyment/review_summary/review_payment_summary.dart';
 import 'package:metube/z_reusable_widget/buttons_custom.dart';
 import 'package:metube/z_reusable_widget/colors_custom.dart';
 import 'package:metube/z_reusable_widget/push_navigation.dart';
 import 'package:metube/z_reusable_widget/text_material/text_theme.dart';
-import '../../../../model/payment_page_model.dart';
-import '../../../../z_reusable_widget/height_weight.dart';
+import '../../../../../model/payment_page_model.dart';
+import '../../../../../z_reusable_widget/height_weight.dart';
 
 class PaymentsPage extends StatelessWidget {
   const PaymentsPage({Key? key}) : super(key: key);
