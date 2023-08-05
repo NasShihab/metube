@@ -2,7 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:metube/screen/dashboard/profile/payment/payments_page.dart';
 import 'package:metube/screen/dashboard/profile/profile_setting_list.dart';
+import 'package:metube/z_reusable_widget/push_navigation.dart';
 import '../../../z_reusable_widget/colors_custom.dart';
 import '../../../z_reusable_widget/height_weight.dart';
 import '../../../z_reusable_widget/text_material/text_theme.dart';
@@ -68,35 +70,40 @@ class ProfileView extends StatelessWidget {
                   style: bodySmall(context),
                 ),
                 height15(),
-                Container(
-                  decoration: BoxDecoration(
-                      color: Colors.transparent,
-                      border: Border.all(color: myPinkAccent),
-                      borderRadius: BorderRadius.circular(15.r)),
-                  child: IntrinsicHeight(
-                    child: Padding(
-                      padding: EdgeInsets.symmetric(
-                          vertical: 15.h, horizontal: 15.w),
-                      child: ListTile(
-                        leading: Icon(
-                          FontAwesomeIcons.crown,
-                          size: 50.sp,
-                          color: myPinkAccent,
+                InkWell(
+                  onTap: () {
+                    pushNavigation(context, pushNav: const PaymentsPage());
+                  },
+                  child: Container(
+                    decoration: BoxDecoration(
+                        color: Colors.transparent,
+                        border: Border.all(color: myPinkAccent),
+                        borderRadius: BorderRadius.circular(15.r)),
+                    child: IntrinsicHeight(
+                      child: Padding(
+                        padding: EdgeInsets.symmetric(
+                            vertical: 15.h, horizontal: 15.w),
+                        child: ListTile(
+                          leading: Icon(
+                            FontAwesomeIcons.crown,
+                            size: 50.sp,
+                            color: myPinkAccent,
+                          ),
+                          title: Text(
+                            'Join Premium',
+                            style: titleLarge(context)?.copyWith(
+                                fontSize: 30.sp, color: myPinkAccent),
+                          ),
+                          subtitle: Text(
+                            'Enjoy watching Full-HD videos, without restrictions and without ads',
+                            style: bodySmall(context),
+                            maxLines: 2,
+                            overflow: TextOverflow.ellipsis,
+                          ),
+                          trailing: const Icon(CupertinoIcons.right_chevron),
+                          contentPadding: EdgeInsets.zero,
+                          horizontalTitleGap: 30.w,
                         ),
-                        title: Text(
-                          'Join Premium',
-                          style: titleLarge(context)
-                              ?.copyWith(fontSize: 30.sp, color: myPinkAccent),
-                        ),
-                        subtitle: Text(
-                          'Enjoy watching Full-HD videos, without restrictions and without ads',
-                          style: bodySmall(context),
-                          maxLines: 2,
-                          overflow: TextOverflow.ellipsis,
-                        ),
-                        trailing: const Icon(CupertinoIcons.right_chevron),
-                        contentPadding: EdgeInsets.zero,
-                        horizontalTitleGap: 30.w,
                       ),
                     ),
                   ),

@@ -1,17 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:metube/z_reusable_widget/colors_custom.dart';
 
-Widget customButton(
-        {String title = 'My Button',
-        double height = 60,
-        double width = double.infinity,
-        double fontSize = 18,
-        dynamic fontWeight = FontWeight.bold,
-        double borderRadius = 30,
-        double paddingVertical = 0,
-        double paddingHorizontal = 0,
-        double outsidePaddingHorizontal = 10,
-        required VoidCallback onPressed}) =>
+Widget customButton({
+  String title = 'My Button',
+  double height = 60,
+  double width = double.infinity,
+  double fontSize = 18,
+  dynamic fontWeight = FontWeight.bold,
+  double borderRadius = 30,
+  double paddingVertical = 0,
+  double paddingHorizontal = 0,
+  double outsidePaddingHorizontal = 10,
+  required VoidCallback onPressed,
+  Color? foregroundColor,
+  Color? backgroundColor,
+}) =>
     Container(
       padding: EdgeInsets.symmetric(horizontal: outsidePaddingHorizontal.w),
       height: height.h,
@@ -19,10 +23,18 @@ Widget customButton(
       child: ElevatedButton(
         style: ButtonStyle(
           padding: MaterialStateProperty.all(
-            EdgeInsets.symmetric(vertical: paddingVertical.h, horizontal: paddingHorizontal.w),
+            EdgeInsets.symmetric(
+                vertical: paddingVertical.h, horizontal: paddingHorizontal.w),
           ),
           shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-            RoundedRectangleBorder(borderRadius: BorderRadius.circular(borderRadius.r)),
+            RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(borderRadius.r)),
+          ),
+          foregroundColor: MaterialStateProperty.resolveWith<Color?>(
+            (states) => foregroundColor ?? Colors.white,
+          ),
+          backgroundColor: MaterialStateProperty.resolveWith<Color?>(
+            (states) => backgroundColor ?? myPinkAccent,
           ),
         ),
         onPressed: onPressed,
@@ -41,7 +53,8 @@ Widget myTextButton({required String icon, required String label}) => SizedBox(
         style: ButtonStyle(
             backgroundColor: MaterialStateProperty.all(Colors.white),
             foregroundColor: MaterialStateProperty.all(Colors.black),
-            padding: MaterialStateProperty.all(EdgeInsets.symmetric(vertical: 18.h)),
+            padding:
+                MaterialStateProperty.all(EdgeInsets.symmetric(vertical: 18.h)),
             elevation: MaterialStateProperty.all(.5)),
         icon: CircleAvatar(
           radius: 11.r,
@@ -54,7 +67,6 @@ Widget myTextButton({required String icon, required String label}) => SizedBox(
         ),
       ),
     );
-
 
 Widget myTextField({
   required Icon icon,
@@ -78,7 +90,8 @@ Widget myTextField({
               borderRadius: BorderRadius.circular(8.r),
               borderSide: BorderSide(color: Colors.grey, width: 1.w),
             ),
-            contentPadding: EdgeInsets.symmetric(vertical: 12.h, horizontal: 12.w)),
+            contentPadding:
+                EdgeInsets.symmetric(vertical: 12.h, horizontal: 12.w)),
       ),
     );
 
@@ -107,6 +120,7 @@ Widget myPasswordField({
               borderRadius: BorderRadius.circular(8.r),
               borderSide: BorderSide(color: Colors.grey, width: 1.w),
             ),
-            contentPadding: EdgeInsets.symmetric(vertical: 12.h, horizontal: 12.w)),
+            contentPadding:
+                EdgeInsets.symmetric(vertical: 12.h, horizontal: 12.w)),
       ),
     );
