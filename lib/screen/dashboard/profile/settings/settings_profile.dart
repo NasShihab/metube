@@ -29,17 +29,17 @@ class ProfileSettings extends StatelessWidget {
           padding: EdgeInsets.symmetric(horizontal: 15.w),
           child: ListView(
             shrinkWrap: true,
-            children: List.generate(settingsList.length, (index) {
+            children: List.generate(settingsList(context).length, (index) {
               return InkWell(
-                onTap: () {},
+                onTap: settingsList(context)[index].onTap,
                 child: ListTile(
                   leading: Icon(
-                    settingsList[index].icon,
+                    settingsList(context)[index].icon,
                     size: 25.sp,
                     color: Theme.of(context).primaryColor,
                   ),
                   title: Text(
-                    settingsList[index].title,
+                    settingsList(context)[index].title,
                     style: bodyMedium(context),
                     overflow: TextOverflow.ellipsis,
                   ),

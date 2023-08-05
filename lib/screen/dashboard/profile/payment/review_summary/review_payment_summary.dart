@@ -2,9 +2,11 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:metube/screen/dashboard/profile/profile_view.dart';
 import 'package:metube/z_reusable_widget/buttons_custom.dart';
 import 'package:metube/z_reusable_widget/colors_custom.dart';
 import 'package:metube/z_reusable_widget/height_weight.dart';
+import 'package:metube/z_reusable_widget/push_navigation.dart';
 import 'package:metube/z_reusable_widget/text_material/text_theme.dart';
 
 class ReviewPaymentSummary extends StatelessWidget {
@@ -160,12 +162,48 @@ class ReviewPaymentSummary extends StatelessWidget {
           ),
         ),
       ),
-
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: customButton(
         title: 'Confirm Payment',
         onPressed: () {
-
+          showDialog(
+              context: context,
+              builder: (context) => AlertDialog(
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(30.r))),
+                    content: IntrinsicHeight(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          CircleAvatar(
+                            radius: 80.r,
+                            backgroundColor: Colors.transparent,
+                            backgroundImage: const AssetImage(
+                                'assets/images/profile2.png'),
+                          ),
+                          height10(),
+                          Text(
+                            'Congratulations',
+                            style: titleLarge(context)?.copyWith(
+                                fontWeight: FontWeight.bold,
+                                color: myPinkAccent),
+                          ),
+                          height20(),
+                          Text(
+                            'You have Successfully subscribed',
+                            style: bodyMedium(context),
+                            textAlign: TextAlign.center,
+                          ),
+                          height20(),
+                          customButton(
+                              onPressed: () {
+                               pushNavigation(context, pushNav: const ProfileView());
+                              },
+                              title: 'Ok Great'),
+                        ],
+                      ),
+                    ),
+                  ));
         },
       ),
     );

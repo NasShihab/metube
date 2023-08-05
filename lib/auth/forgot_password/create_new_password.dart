@@ -15,7 +15,7 @@ class CreateNewPassword extends StatelessWidget {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       extendBodyBehindAppBar: true,
-      appBar: customAppBar(context, appBarTitle: 'Create Nas Password'),
+      appBar: customAppBar(context, appBarTitle: 'Create New Password'),
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 0.h),

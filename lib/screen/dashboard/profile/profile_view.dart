@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:metube/screen/dashboard/profile/payment/payments_page.dart';
+import 'package:metube/screen/dashboard/profile/premium_subscription/premium_subscription_view.dart';
 import 'package:metube/screen/dashboard/profile/profile_setting_list.dart';
 import 'package:metube/z_reusable_widget/push_navigation.dart';
 import '../../../z_reusable_widget/colors_custom.dart';
@@ -72,12 +72,13 @@ class ProfileView extends StatelessWidget {
                 height15(),
                 InkWell(
                   onTap: () {
-                    pushNavigation(context, pushNav: const PaymentsPage());
+                    pushNavigation(context,
+                        pushNav: const PremiumSubscriptionView());
                   },
                   child: Container(
                     decoration: BoxDecoration(
                         color: Colors.transparent,
-                        border: Border.all(color: myPinkAccent),
+                        border: Border.all(color: myPinkAccent,width: 3.w),
                         borderRadius: BorderRadius.circular(15.r)),
                     child: IntrinsicHeight(
                       child: Padding(
